@@ -1,0 +1,36 @@
+/*
+H1 = Museo Slab 700 36pt / 38pt (orange)
+H2 = Museo Slab 700 24pt (orange)
+H3 = Museo Sans Rounded 700 24pt (orange & blue)
+P = Museo Sans Rounded 16pt / 20pt (navy & white)
+
+Slider txt = Museo Sans Rounded 18pt / 22pt (white)
+*/
+
+body {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: em(36);
+}
+
+h2 {
+	font-size: em(24);
+}
+
+h3 {
+	font-size: em(20);
+}
+
+h4 {
+	font-size: em(18);
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6, h7, h8 {
+	font-size: .85em;
+}

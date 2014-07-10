@@ -1,0 +1,538 @@
+/******************************************************************************
+Theme Name: Silverbox Skeleton
+Theme URI: http://silverboxdev.com
+Description: Silverbox Development Framework
+Version: 1.0
+Author: Adam Silverman
+Author URI: http://silverboxdev.com
+License: GNU General Plug License version 3.0
+Tags: Wordpress Framework, Custom Framework, Wordpress Custom Theme
+******************************************************************************/
+/*-------------------------------------- Import Files ---------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ---------- RESET ---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+input {
+  margin: 0;
+  padding: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 100%; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ul,
+ol,
+li {
+  list-style-type: none; }
+
+input,
+textarea {
+  outline: none; }
+
+strong {
+  font-weight: bold; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.cb {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0; }
+
+.clearfix:after {
+  clear: both; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.cb {
+  clear: both; }
+
+/*-------------------------------------- Colors ---------------------------------------*/
+/*-------------------------------------- Sub Colors ---------------------------------------*/
+/*-------------------------------------- Body Mixins ---------------------------------------*/
+/*
+H1 = Museo Slab 700 36pt / 38pt (orange)
+H2 = Museo Slab 700 24pt (orange)
+H3 = Museo Sans Rounded 700 24pt (orange & blue)
+P = Museo Sans Rounded 16pt / 20pt (navy & white)
+
+Slider txt = Museo Sans Rounded 18pt / 22pt (white)
+*/
+body {
+  font-size: 16px; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1em; }
+
+h6, h7, h8 {
+  font-size: .85em; }
+
+/*-------------------------------------- Column Creation ---------------------------------------*/
+.span_12 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .span_12:last-child {
+    margin-right: 0; }
+
+.span_11 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 91.4702%; }
+  .span_11:last-child {
+    margin-right: 0; }
+
+.span_10 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .span_10:last-child {
+    margin-right: 0; }
+
+.span_9 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .span_9:last-child {
+    margin-right: 0; }
+
+.span_8 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .span_8:last-child {
+    margin-right: 0; }
+
+.span_7 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 57.35098%; }
+  .span_7:last-child {
+    margin-right: 0; }
+
+.span_6 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .span_6:last-child {
+    margin-right: 0; }
+
+.span_5 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 40.29137%; }
+  .span_5:last-child {
+    margin-right: 0; }
+
+.span_4 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .span_4:last-child {
+    margin-right: 0; }
+
+.span_3 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .span_3:last-child {
+    margin-right: 0; }
+
+.span_2 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .span_2:last-child {
+    margin-right: 0; }
+
+.span_1 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 6.17215%; }
+  .span_1:last-child {
+    margin-right: 0; }
+
+.shift_1 {
+  margin-left: 8.5298%; }
+
+.shift_2 {
+  margin-left: 17.05961%; }
+
+.shift_3 {
+  margin-left: 25.58941%; }
+
+.shift_4 {
+  margin-left: 34.11922%; }
+
+.shift_5 {
+  margin-left: 42.64902%; }
+
+.shift_6 {
+  margin-left: 51.17883%; }
+
+.shift_7 {
+  margin-left: 400.9008%; }
+
+.shift_8 {
+  margin-left: 68.23843%; }
+
+.shift_9 {
+  margin-left: 76.76824%; }
+
+.shift_10 {
+  margin-left: 85.29804%; }
+
+.shift_11 {
+  margin-left: 93.82785%; }
+
+.shift_12 {
+  margin-left: 102.35765%; }
+
+.omega, .last {
+  margin-right: 0; }
+
+/* Local CSS Colors */
+/*-------------------------------------- Header ---------------------------------------*/
+header {
+  padding: 3em 0;
+  background: #d0e3e3;
+  border-bottom: 4px solid #447799; }
+  header .logo a {
+    color: #447799;
+    padding-left: .5em;
+    text-decoration: none;
+    font-size: 24px; }
+  header .mainNav {
+    margin-top: 5px; }
+    header .mainNav ul li {
+      display: inline-block; }
+      header .mainNav ul li a {
+        display: inline-block;
+        color: #447799;
+        text-decoration: none;
+        margin-right: 1.5em;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+        header .mainNav ul li a:hover {
+          color: #225533; }
+
+/*-------------------------------------- Footer ---------------------------------------*/
+footer {
+  background: #d0e3e3; }
+
+/*-------------------------------------- Global Styles ---------------------------------------*/
+.mobile_only, .mobileNav {
+  display: none; }
+
+/*-------------------------------------- Structure ---------------------------------------*/
+body {
+  line-height: 1.2em;
+  font: 16px Arial, Verdana, sans-serif;
+  color: #333;
+  background: #e2e2e2; }
+
+.body_wrapper {
+  zoom: 1;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFF; }
+  .body_wrapper:before, .body_wrapper:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .body_wrapper:after {
+    clear: both; }
+
+/*-------------------------------------- Header ---------------------------------------*/
+header {
+  padding: 3em 0;
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  header:last-child {
+    margin-right: 0; }
+  header .logo {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    header .logo:last-child {
+      margin-right: 0; }
+  header .mainNav {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-right: 0; }
+    header .mainNav:last-child {
+      margin-right: 0; }
+    header .mainNav ul li {
+      display: inline-block; }
+      header .mainNav ul li a {
+        display: inline-block;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+
+/*-------------------------------------- Search DropDown ---------------------------------------*/
+div.searchContain {
+  width: 940px;
+  clear: left;
+  background: #eee;
+  padding: 2em 1em 2em;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.2);
+  position: absolute;
+  z-index: 9999;
+  top: 160px;
+  display: block; }
+  div.searchContain .searchButton {
+    display: inline-block;
+    position: relative;
+    top: 8px; }
+  div.searchContain input[type="text"] {
+    padding: .5em 1em;
+    font-size: 22px;
+    border: none;
+    background: transparent;
+    color: #999; }
+
+/*-------------------------------------- Body Content ---------------------------------------*/
+.default_page {
+  margin: 2em 0;
+  zoom: 1;
+  padding: 1em; }
+  .default_page:before, .default_page:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .default_page:after {
+    clear: both; }
+
+/*-------------------------------------- WP Editor ---------------------------------------*/
+.wp_content {
+  padding: 3em 0; }
+  .wp_content div, .wp_content p, .wp_content ol, .wp_content ul, .wp_content dl, .wp_content dd, .wp_content table {
+    line-height: 1.25em; }
+  .wp_content p {
+    margin: 1em 0; }
+  .wp_content a {
+    color: blue;
+    text-decoration: underline;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    .wp_content a:hover {
+      color: pink; }
+  .wp_content ol {
+    margin: 1em 0 1em 1.15em; }
+    .wp_content ol li {
+      list-style: decimal;
+      padding: .25em 0; }
+  .wp_content ul {
+    margin: 1em 0 1em 1.15em; }
+    .wp_content ul li {
+      list-style: disc;
+      padding: .25em; }
+  .wp_content p {
+    margin: 1em 0;
+    line-height: 1.5em; }
+  .wp_content b, .wp_content strong {
+    font-weight: bold; }
+  .wp_content i, .wp_content em {
+    font-style: italic; }
+  .wp_content blockquote {
+    margin: 1em 3em;
+    color: #666;
+    border-left: 2px solid #666;
+    padding-left: 1em; }
+  .wp_content input[type="text"], .wp_content textarea, .wp_content input[type="email"] {
+    background: #FFF;
+    display: block;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    color: #666;
+    width: 100%;
+    padding: .4em 1em;
+    font-size: 16px;
+    margin: 0 0 1em 0;
+    border: 1px solid #FFF; }
+  .wp_content #wpcf7-f44-p14-o1 br {
+    display: none; }
+  .wp_content #wpcf7-f44-p14-o1 p {
+    margin: .25em 0; }
+  .wp_content .aligncenter,
+  .wp_content .alignleft,
+  .wp_content .alighnright,
+  .wp_content .alignnone {
+    padding: 3px;
+    z-index: 1; }
+  .wp_content .alignleft {
+    float: left;
+    margin: 1.5em 2em 1.5em 0; }
+  .wp_content .alignright {
+    float: right;
+    margin: 1.5em 0 1.5em 2em; }
+  .wp_content .aligncenter,
+  .wp_content img.centered {
+    display: block;
+    margin: 1.5em auto; }
+  .wp_content .wp-caption {
+    text-align: center; }
+  .wp_content .wp-caption .wp-caption-text {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 34px; }
+  .wp_content .video-container + p {
+    margin-top: 1.5em; }
+  .wp_content .tag-container {
+    border: 1px solid #e4e4e4;
+    border-width: 1px 0;
+    font-style: italic;
+    font-size: 12px;
+    color: #c9c9c9;
+    line-height: 42px;
+    margin-top: 3em; }
+  .wp_content .post-navigation {
+    text-align: center;
+    font-size: 12px;
+    line-height: 42px; }
+  .wp_content .article-author {
+    background: #fafafa;
+    border-top: 1px solid #d7d7d7;
+    padding: 3em;
+    -webkit-box-shadow: inset 5px 0 0 #ededed, inset -5px -5px 0 #ededed; }
+  .wp_content .article-author p {
+    margin-bottom: 0; }
+
+/*-------------------------------------- Footer ---------------------------------------*/
+footer {
+  clear: left;
+  padding: 1em; }
+  footer .footer_widgets {
+    zoom: 1; }
+    footer .footer_widgets:before, footer .footer_widgets:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    footer .footer_widgets:after {
+      clear: both; }
+  footer .copyright {
+    clear: both;
+    margin: 2em 0; }

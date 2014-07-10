@@ -1,0 +1,261 @@
+/*-------------------------------------- Import Files ---------------------------------------*/
+
+@import "bourbon";
+@import "neat/neat";
+@import "grid-settings";
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "type";
+@import "columns";
+@import "local";
+
+/*-------------------------------------- Global Styles ---------------------------------------*/
+
+.mobile_only, .mobileNav {
+	display: none;
+}
+
+/*-------------------------------------- Structure ---------------------------------------*/
+
+body {
+	line-height: 1.2em;
+	font: 16px Arial, Verdana, sans-serif;
+	color: #333;
+	background: #e2e2e2;
+}
+
+.body_wrapper {
+	@include outer-container();
+	background: #FFF;
+}
+
+/*-------------------------------------- Header ---------------------------------------*/
+
+
+header {
+	padding: 3em 0;
+	position: relative;
+	@include span-columns(12);
+	@include box-sizing;
+	
+	.logo {
+		@include span-columns(4);
+	}
+	
+	.mainNav {
+		@include span-columns(8);
+		@include omega();
+		
+		ul {
+			li {
+			
+				display: inline-block;
+				
+				a {
+					display: inline-block;
+					@include all-transition;
+					
+					&:hover {
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------- Search DropDown ---------------------------------------*/
+
+div.searchContain {
+	width: 940px;
+	clear: left;
+	background: #eee;
+	padding: 2em 1em 2em;
+	@include bottom-shadow;
+	position: absolute;
+	z-index: 9999;
+	top: 160px;
+	display: block;
+	
+	.searchButton {
+		display: inline-block;
+		position: relative;
+		top: 8px;
+	}
+	
+	input[type="text"] {
+		padding: .5em 1em;
+		font-size: 22px;
+		border: none;
+		background: transparent;
+		color: #999;
+	}
+}
+
+/*-------------------------------------- Body Content ---------------------------------------*/
+
+.default_page {
+	margin: 2em 0;
+	@include clearfix;
+	padding: 1em;
+}
+
+/*-------------------------------------- WP Editor ---------------------------------------*/
+
+
+.wp_content {
+	padding: 3em 0;
+	
+	div, p, ol, ul, dl, dd, table {
+		line-height: 1.25em;
+	}
+	
+	p {
+		margin: 1em 0;
+	}
+	
+	a {
+		color: blue;
+		text-decoration: underline;
+		@include color-transition;
+		&:hover {
+			color: pink;
+		}
+	}
+	
+	ol {
+		margin: 1em 0 1em 1.15em;
+		li {
+			list-style: decimal;
+			padding: .25em 0;
+		}
+	}
+		
+	ul {
+		margin: 1em 0 1em 1.15em;
+		li {
+			list-style: disc;
+			padding: .25em;
+		}
+	}
+		
+	p {
+		margin: 1em 0;
+		line-height: 1.5em;
+	}
+	
+	b, strong {
+		font-weight: bold;
+	}
+
+	i, em {
+		font-style: italic;
+	}
+	
+	blockquote {
+		margin: 1em 3em;
+		color: #666;
+		border-left: 2px solid #666;
+		padding-left: 1em;
+	}
+	
+	// Form Elements
+	input[type="text"], textarea, input[type="email"] {
+		background: #FFF;
+		display: block;
+		@include round-corners(7px);
+		color: #666;
+		width: 100%;
+		padding: .4em 1em;
+		font-size: 16px;
+		margin: 0 0 1em 0;
+		border: 1px solid #FFF;
+	}
+	
+	#wpcf7-f44-p14-o1 br { display: none; }
+	#wpcf7-f44-p14-o1 p {
+		margin: .25em 0;
+	}
+	
+	// WP Images
+	
+	.aligncenter,
+	.alignleft,
+	.alighnright,
+	.alignnone {
+	  padding: 3px;
+	  z-index: 1;
+	}
+	.alignleft {
+	  float: left;
+	  margin: 1.5em 2em 1.5em 0;
+	}
+	.alignright {
+	  float: right;
+	  margin: 1.5em 0 1.5em 2em;
+	}
+	.aligncenter,
+	img.centered {
+	  display: block;
+	  margin: 1.5em auto;
+	}
+	.wp-caption {
+	  text-align: center;
+	}
+	.wp-caption .wp-caption-text {
+	  margin-bottom: 0;
+	  font-size: 12px;
+	  font-style: italic;
+	  line-height: 34px;
+	}
+	.video-container + p {
+	  margin-top: 1.5em;
+	}
+	.tag-container {
+	  border: 1px solid #e4e4e4;
+	  border-width: 1px 0;
+	  font-style: italic;
+	  font-size: 12px;
+	  color: #c9c9c9;
+	  line-height: 42px;
+	  margin-top: 3em;
+	}
+	.post-navigation {
+	  text-align: center;
+	  font-size: 12px;
+	  line-height: 42px;
+	}
+	.article-author {
+	  background: #fafafa;
+	  border-top: 1px solid #d7d7d7;
+	  padding: 3em;
+	  -webkit-box-shadow: inset 5px 0 0 #ededed, inset -5px -5px 0 #ededed;
+	}
+	.article-author p {
+	  margin-bottom: 0;
+	}
+	
+}
+
+
+/*-------------------------------------- Footer ---------------------------------------*/
+
+footer {
+	clear: left;
+	padding: 1em;
+	
+	.footer_widgets {
+		@include clearfix;
+	}
+	
+	.copyright {
+		clear: both;
+		margin: 2em 0;
+	}
+}
+
+*[class*="span_"] {
+	//border: 1px solid blue;
+	//padding: 1em;
+}
