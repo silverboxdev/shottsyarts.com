@@ -129,6 +129,26 @@ header .social_icons {
 	}
 }
 
+footer .social_icons {
+	a.fb {
+		background: url('images/icon_facebook-footer.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.twitter {
+		background: url('images/icon_twitter-footer.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.youtube {
+		background: url('images/icon_youtube-footer.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+}
 /*-------------------------------------- Body Content ---------------------------------------*/
 
 .default_page {
@@ -305,6 +325,10 @@ footer {
 		h2 > a {
 			color: $yellow;
 			text-decoration: none;
+			
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 		
 		.more_button {
@@ -317,9 +341,23 @@ footer {
 		@include clearfix;
 	}
 	
+	.bottom_footer {
+		margin: 3em 0;
+	}
+	
 	.copyright {
 		clear: both;
-		margin: 2em 0;
+		margin: .5em 0 1.5em 0;
+		font-size: 11px;
+		color: $purple;
+		
+		a {
+			color: $purple;
+			text-decoration: none;
+			&:hover {
+				color: darken($purple, 10%);
+			}
+		}
 	}
 }
 

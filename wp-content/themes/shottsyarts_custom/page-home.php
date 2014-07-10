@@ -1,33 +1,26 @@
 <?php
 	/* Template Name: Homepage */
 	get_header();
-	
-	// Grab Sidebar Selection
-	
-	$sidebar_selection = rwmb_meta( 'silverbox_selection' );
 		
-	// Grab Sidebar Position
-	
-	$sidebar_position = rwmb_meta( 'silverbox_position' );
-	
-	if($sidebar_position == "no_sidebar" || $sidebar_position == "") {
-		$sidebar_class = "span_12 last";
-	}
-	
-	elseif($sidebar_position == "left_sidebar") {
-		$sidebar_class = "span_8 last";
-	}
-	
-	else {
-		$sidebar_class = "span_8";
-	}
-	
 	$layer_slide_id = rwmb_meta('silverbox_slider');
 	
 	if($layer_slide_id == "" || !(isset($layer_slide_id))) {
 		$layer_slide_id = 1;
 	}
 ?>
+
+<script type="text/javascript" language="javascript">
+    jQuery(document).ready(function($) {
+       $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: false,
+            slideshow: false,
+            pauseOnAction: "true",
+            prevText: "",
+            nextText: ""
+          });
+    });
+</script>
 
 <!-- Start Main Content -->
 
@@ -42,33 +35,43 @@
 
 	<!-- WP Content -->
 	<div class="inside">
-	
-	<!-- If Left Sidebar -->
-	<?php if($sidebar_position == "left_sidebar") { ?>
-	
-		<aside class="sidebar span_4">
-			
-			<?php if (is_active_sidebar($sidebar_selection)) : ?>
-				<?php dynamic_sidebar($sidebar_selection); ?>
-			<?php endif;?>
-			
-		</aside>
-	<? } ?>
 					
 	<article class="wp_content <?= $sidebar_class; ?>" id="wp_content_<?php the_ID(); ?>">
+		<div class="span_6">
+			<?php the_content(); ?>
+		</div>
+		
+		<div class="span_6 omega">
+			<div class="flexslider">
+				<ul class="slides">
+			<?php
+			$args=array(
+			    'post_type' => 'comics',
+			    'post_status' => 'publish',
+			    'posts_per_page' => 5,
+			    'orderby' => 'rand',
+			);
 			
-		<?php the_content(); ?>
+			$home_feature_query = new WP_Query($args);
+			
+			while ($home_feature_query->have_posts()) : $home_feature_query->the_post(); ?>
+				
+				<li>
+					<? echo the_post_thumbnail('full'); ?>
+					<h2 class="flex-caption yellow_header"><?= the_title();?></h2>
+				</li>
+			
+			<?php 
+				endwhile;
+				wp_reset_query();
+			?>
+				</ul>
+				<div class=""
+			</div>
+		</div>
 			
 	</article>
 	
-	<!-- If Right Sidebar -->
-	<?php if($sidebar_position == "right_sidebar") { ?>
-		<aside class="sidebar span_4 last">
-			<?php if (is_active_sidebar($sidebar_selection)) : ?>
-				<?php dynamic_sidebar($sidebar_selection); ?>
-			<?php endif;?>
-		</aside>
-	<? } ?>
 	
 	</div> <!-- / inside -->
 	

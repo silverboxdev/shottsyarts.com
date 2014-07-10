@@ -37,10 +37,10 @@
 		<?php get_sidebar('footer'); ?>
 	</div>
 	
+	<div class="bottom_footer">
 	
-	<div class="copyright">
-	
-		<div class="inside">
+		<div class="copyright span_6">
+		
 			<p class="copyright_text">
 			<?php if (is_active_sidebar('copyright-widget')) : ?>
 			<?php dynamic_sidebar('copyright-widget'); ?>
@@ -48,9 +48,18 @@
 			Copyright <?= date('Y'); ?>
 			<?php endif; ?>
 			</p>
+			
 		</div>
 		
-	</div>
+		<div class="span_6 omega social_icons">
+			<div class="fr">
+				<a href="#" class="s_icon fb">Facebook</a>
+				<a href="#" class="s_icon twitter">Twitter</a>
+				<a href="#" class="s_icon youtube">YouTube</a>
+			</div>
+		</div>
+		
+	</div> <!-- bottom_footer -->
 
 	</div> <!-- /inside -->
 	

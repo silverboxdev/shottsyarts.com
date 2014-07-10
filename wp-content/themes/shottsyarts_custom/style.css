@@ -181,6 +181,9 @@ h5 {
 h6, h7, h8 {
   font-size: .85em; }
 
+h2.yellow_header {
+  color: #ffd10b; }
+
 /*-------------------------------------- Column Creation ---------------------------------------*/
 .span_12 {
   display: block;
@@ -425,6 +428,19 @@ header .social_icons a.youtube {
   header .social_icons a.youtube:hover {
     background-position: 0 -30px; }
 
+footer .social_icons a.fb {
+  background: url("images/icon_facebook-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.fb:hover {
+    background-position: 0 -30px; }
+footer .social_icons a.twitter {
+  background: url("images/icon_twitter-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.twitter:hover {
+    background-position: 0 -30px; }
+footer .social_icons a.youtube {
+  background: url("images/icon_youtube-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.youtube:hover {
+    background-position: 0 -30px; }
+
 /*-------------------------------------- Body Content ---------------------------------------*/
 .default_page {
   zoom: 1; }
@@ -567,6 +583,8 @@ footer {
     footer .recent_post h2 > a {
       color: #ffd10b;
       text-decoration: none; }
+      footer .recent_post h2 > a:hover {
+        text-decoration: underline; }
     footer .recent_post .more_button {
       margin: 1.5em 0;
       float: right; }
@@ -579,11 +597,57 @@ footer {
       overflow: hidden; }
     footer .footer_widgets:after {
       clear: both; }
+  footer .bottom_footer {
+    margin: 3em 0; }
   footer .copyright {
     clear: both;
-    margin: 2em 0; }
+    margin: .5em 0 1.5em 0;
+    font-size: 11px;
+    color: #9300b3; }
+    footer .copyright a {
+      color: #9300b3;
+      text-decoration: none; }
+      footer .copyright a:hover {
+        color: #690080; }
 
 /*-------------------------------------- Extra Files ---------------------------------------*/
+.wp_content ul.slides {
+  margin: 0; }
+  .wp_content ul.slides li {
+    list-style: none;
+    padding: 0; }
+.wp_content ol.flex-control-nav {
+  list-style: none;
+  margin: 0; }
+  .wp_content ol.flex-control-nav li {
+    list-style: none;
+    padding: 0; }
+.wp_content ul.flex-direction-nav {
+  color: #FFF;
+  margin: -.5em 0 1em 0;
+  position: relative;
+  height: 50px;
+  top: -60px; }
+  .wp_content ul.flex-direction-nav li {
+    display: inline-block; }
+    .wp_content ul.flex-direction-nav li a {
+      display: block;
+      width: 18px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px; }
+    .wp_content ul.flex-direction-nav li a.flex-prev {
+      background: url("images/slider_arrow_prev.png") 0 0 no-repeat;
+      left: 2%; }
+    .wp_content ul.flex-direction-nav li a.flex-next {
+      background: url("images/slider_arrow_next.png") 0 0 no-repeat;
+      right: 2%; }
+.wp_content h2.flex-caption {
+  text-align: center;
+  background: #550067;
+  padding: .5em 0; }
+
 /*-------------------------------------- Global Input Styles ---------------------------------------*/
 input[type="text"], input[type="email"], textarea {
   display: block;
