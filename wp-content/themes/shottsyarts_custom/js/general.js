@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var theme_path = "/wp-content/themes/silverskeleton";
+	var theme_path = "/wp-content/themes/shottsyarts_custom";
 
 	$('.mainNav li.menu-item-has-children').hover(function() {
 		$(this).toggleClass('hover_nav');
@@ -38,22 +38,6 @@ $(document).ready(function() {
 		 e.preventDefault();
 	 });
 	 
-	 // Adds Search Button to Header
-	 
-	 $('.mainNav #menu-main-menu').append('<li><a href="#" class="searchTrigger"><img src="' + theme_path + '/images/btn-search.png" alt="Search Button" /></a></li>');
-	 
-	 // Search Trigger Functions 
-	 
-	 $('.searchButton').click(function(e) {
-		$('#search-form').submit();
-		e.preventDefault();
-	});
-	
-	$('.searchTrigger').click(function(e) {
-		$('.searchContain').slideToggle('fast');
-		e.preventDefault();
-	});
-
 });
 
 $(window).load(function() {

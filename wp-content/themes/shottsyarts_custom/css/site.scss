@@ -22,74 +22,106 @@ body {
 	line-height: 1.2em;
 	font: 16px Arial, Verdana, sans-serif;
 	color: #333;
-	background: #e2e2e2;
 }
 
 .body_wrapper {
-	@include outer-container();
 	background: #FFF;
+}
+
+section.inside, div.inside, article.inside {
+	@include outer-container();
 }
 
 /*-------------------------------------- Header ---------------------------------------*/
 
 
-header {
-	padding: 3em 0;
+header.masthead {
 	position: relative;
-	@include span-columns(12);
 	@include box-sizing;
+	padding-top: .5em;
+	background: url('images/bg_header-blue.jpg') center center repeat-x;
 	
-	.logo {
-		@include span-columns(4);
+	.social_icons {
+		float: right;
 	}
 	
-	.mainNav {
-		@include span-columns(8);
-		@include omega();
+	.head_wrap {
+		@include clearfix;
+		width: 100%;
+		background: url('images/bg_header-bar.jpg') center center repeat-x;
+	}
+	
+	.logo {
+		@include span-columns(12);
+		clear: right;
+		padding: .5em 0 0 0;
 		
-		ul {
-			li {
+		a {
+			text-indent: -999em;
+			display: block;
+			background: url('images/logo.jpg') 0 0 no-repeat;
+			width: 940px;
+			height: 250px;
+			&:hover {
+				background-position: 0 -250px;
+			}
+		}
+	}
+}
+
+/*-------------------------------------- Navigation ---------------------------------------*/
+
+.mainNav {
+	width: 100%;
 			
+	ul {
+		border: 1px solid blue;
+		li {
+		
+			display: inline-block;
+			
+			a {
 				display: inline-block;
+				@include all-transition;
 				
-				a {
-					display: inline-block;
-					@include all-transition;
+				&:hover {
 					
-					&:hover {
-						
-					}
 				}
 			}
 		}
 	}
 }
 
-/*-------------------------------------- Search DropDown ---------------------------------------*/
+/*-------------------------------------- Social Media Icons ---------------------------------------*/
 
-div.searchContain {
-	width: 940px;
-	clear: left;
-	background: #eee;
-	padding: 2em 1em 2em;
-	@include bottom-shadow;
-	position: absolute;
-	z-index: 9999;
-	top: 160px;
-	display: block;
-	
-	.searchButton {
+.social_icons {
+	a {
 		display: inline-block;
-		position: relative;
-		top: 8px;
+		width: 30px;
+		height: 30px;
+		text-indent: -999em;
+		margin-left: .2em;
 	}
-	
-	input[type="text"] {
-		padding: .5em 1em;
-		font-size: 22px;
-		border: none;
-		background: transparent;
-		color: #999;
+}
+
+header .social_icons {
+	a.fb {
+		background: url('images/icon_facebook-header.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.twitter {
+		background: url('images/icon_twitter-header.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.youtube {
+		background: url('images/icon_youtube-header.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
 	}
 }
 

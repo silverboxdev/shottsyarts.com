@@ -198,7 +198,7 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 /* Included Functions */
 /***********************************************************************************/
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/wp-content/themes/silverskeleton/functions/shortcodes.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/wp-content/themes/silverskeleton/functions/metaboxes.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/wp-content/themes/shottsyarts_custom/functions/shortcodes.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/wp-content/themes/shottsyarts_custom/functions/metaboxes.php");
 
 ?>

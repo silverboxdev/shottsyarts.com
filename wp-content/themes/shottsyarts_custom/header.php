@@ -31,37 +31,39 @@
 			<!-- Header -->
 				
 			<header class="masthead">
+			
+				<div class="head_wrap">
 				
-				<div class="logo">
-					<a href="/">Main Logo Goes Here</a>
-				</div>
+				<div class="inside">
 				
-				<!-- Main Navigation -->
-				<nav class="mainNav">
-					<ul>
-						<?php 
-							wp_nav_menu(array(
-								'theme_location' => 'top-menu'
-							)); 
-						?>	
-					</ul>
-				</nav>
+					<div class="social_icons">
+						<a href="#" class="s_icon fb">Facebook</a>
+						<a href="#" class="s_icon twitter">Twitter</a>
+						<a href="#" class="s_icon youtube">YouTube</a>
+					</div>
+				
+					<div class="logo">
+						<a href="/">Shottsy Arts</a>
+					</div>
+				
+				</div> <!-- /inside -->
+				
+				</div> <!-- /head_wrap-->
 				
 				<a href="#" class="navTrigger mobile_only">Trigger</a>
-				
 			</header>
 			
-			<div class="searchContain">
-				<div class="inside">
-				<form action="<?php echo home_url(); ?>" id="search-form" method="get">
-					<a href="#" class="searchButton"><img src="<?= IMAGES; ?>/btn-search-big.png" alt="Search" /></a>
-					<input type="hidden" value="submit" />
-					<input type="text" name="s" id="s" value="Search For..." onblur="if(this.value=='')this.value='Search For...'" onfocus="if(this.value=='Search For...')this.value=''" />
-				</form>
-				</div>
-			</div>
-			
 			<!-- Main Navigation -->
+			<nav class="mainNav">
+				<ul>
+					<?php 
+						wp_nav_menu(array(
+							'theme_location' => 'top-menu'
+						)); 
+					?>	
+				</ul>
+			</nav>
+			
 			<nav class="mobileNav">
 				<ul>
 					<?php 
