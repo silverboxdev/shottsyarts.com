@@ -1,4 +1,46 @@
 /*-------------------------------------- Body Mixins ---------------------------------------*/
+@mixin overlock {
+	font-family: 'Overlock', cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin overlock_bold {
+	font-family: 'Overlock', cursive;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin overlock_heavy {
+	font-family: 'Overlock', cursive;
+	font-weight: 900;
+	font-style: normal;
+}
+
+@mixin overlock_italic {
+	font-family: 'Overlock', cursive;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin cinzel {
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin cinzel_bold {
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin cinzel_heavy {
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: 900;
+	font-style: normal;
+}
+
 @mixin box-sizing {
 	-webkit-box-sizing: border-box;
 	-o-box-sizing: border-box;

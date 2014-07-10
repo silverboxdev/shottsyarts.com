@@ -1,0 +1,33 @@
+.button {
+	font-size: 16px;
+	display: inline-block;
+	padding: .35em 1em;
+	@include round-corners(5px);
+}
+
+.blue_button {
+	color: #FFF;
+	background: $blue;
+	@include all-transition;
+	&:hover {
+		background: darken($blue, 12%);
+	}
+}
+
+.purple_button {
+	color: $yellow;
+	background: $dark_purple;
+	@include all-transition;
+	&:hover {
+		background: darken($purple, 12%);
+	}
+}
+
+.yellow_button {
+	color: $dark_purple;
+	background: $yellow;
+	@include all-transition;
+	&:hover {
+		background: darken($yellow, 12%);
+	}
+}

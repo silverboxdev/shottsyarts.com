@@ -9,22 +9,38 @@ Slider txt = Museo Sans Rounded 18pt / 22pt (white)
 
 body {
 	font-size: 16px;
+	line-height: 20px;
+	color: $dark_purple;
+	@include overlock;
+}
+
+strong, b {
+	font-weight: 700;
+}
+
+h1, h2, h3, h4, h5 {
+	color: $dark_purple;
+	line-height: 1.2em;
 }
 
 h1 {
-	font-size: em(36);
+	font-size: 36px;
+	@include cinzel_bold;
 }
 
 h2 {
-	font-size: em(24);
+	font-size: 24px;
+	@include cinzel_bold;
 }
 
 h3 {
-	font-size: em(20);
+	font-size: 24px;
+	@include overlock_heavy;
 }
 
 h4 {
-	font-size: em(18);
+	font-size: 20px;
+	@include overlock_bold;
 }
 
 h5 {

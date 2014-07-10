@@ -134,19 +134,43 @@ P = Museo Sans Rounded 16pt / 20pt (navy & white)
 Slider txt = Museo Sans Rounded 18pt / 22pt (white)
 */
 body {
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 20px;
+  color: #550067;
+  font-family: 'Overlock', cursive;
+  font-weight: 400;
+  font-style: normal; }
+
+strong, b {
+  font-weight: 700; }
+
+h1, h2, h3, h4, h5 {
+  color: #550067;
+  line-height: 1.2em; }
 
 h1 {
-  font-size: 2.25em; }
+  font-size: 36px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  font-style: normal; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 24px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  font-style: normal; }
 
 h3 {
-  font-size: 1.25em; }
+  font-size: 24px;
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal; }
 
 h4 {
-  font-size: 1.125em; }
+  font-size: 20px;
+  font-family: 'Overlock', cursive;
+  font-weight: 700;
+  font-style: normal; }
 
 h5 {
   font-size: 1em; }
@@ -295,11 +319,6 @@ h6, h7, h8 {
   display: none; }
 
 /*-------------------------------------- Structure ---------------------------------------*/
-body {
-  line-height: 1.2em;
-  font: 16px Arial, Verdana, sans-serif;
-  color: #333; }
-
 .body_wrapper {
   background: #FFF; }
 
@@ -330,7 +349,7 @@ header.masthead {
   header.masthead .head_wrap {
     zoom: 1;
     width: 100%;
-    background: url("images/bg_header-bar.jpg") center center repeat-x; }
+    background: url("images/bg_header-bar.jpg") center 140px repeat-x; }
     header.masthead .head_wrap:before, header.masthead .head_wrap:after {
       content: "\0020";
       display: block;
@@ -358,17 +377,26 @@ header.masthead {
 
 /*-------------------------------------- Navigation ---------------------------------------*/
 .mainNav {
-  width: 100%; }
-  .mainNav ul {
-    border: 1px solid blue; }
-    .mainNav ul li {
-      display: inline-block; }
-      .mainNav ul li a {
-        display: inline-block;
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        transition: all 0.2s ease; }
+  width: 100%;
+  background: #550067; }
+  .mainNav ul li {
+    display: inline-block; }
+    .mainNav ul li a {
+      display: inline-block;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      color: #ffd10b;
+      -webkit-transition: color 0.2s ease;
+      -moz-transition: color 0.2s ease;
+      -o-transition: color 0.2s ease;
+      transition: color 0.2s ease;
+      padding: .75em 1.1em;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .mainNav ul li a:hover {
+        color: #00a9d3; }
 
 /*-------------------------------------- Social Media Icons ---------------------------------------*/
 .social_icons a {
@@ -412,14 +440,14 @@ header .social_icons a.youtube {
   .wp_content p {
     margin: 1em 0; }
   .wp_content a {
-    color: blue;
+    color: #00a9d3;
     text-decoration: underline;
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease; }
     .wp_content a:hover {
-      color: pink; }
+      color: #00a9d3; }
   .wp_content ol {
     margin: 1em 0 1em 1.15em; }
     .wp_content ol li {
@@ -519,3 +547,42 @@ footer {
   footer .copyright {
     clear: both;
     margin: 2em 0; }
+
+/*-------------------------------------- Extra Files ---------------------------------------*/
+.button {
+  font-size: 16px;
+  display: inline-block;
+  padding: .35em 1em;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+
+.blue_button {
+  color: #FFF;
+  background: #00a9d3;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .blue_button:hover {
+    background: #007896; }
+
+.purple_button {
+  color: #ffd10b;
+  background: #550067;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .purple_button:hover {
+    background: #610076; }
+
+.yellow_button {
+  color: #550067;
+  background: #ffd10b;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .yellow_button:hover {
+    background: #cda600; }

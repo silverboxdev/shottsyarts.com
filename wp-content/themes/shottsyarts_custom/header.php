@@ -18,7 +18,8 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 		
-		<!-- Typekit -->
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Overlock:400,700,900,400italic,700italic,900italic|Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
 		
 		<?php wp_head(); ?>
 		
@@ -55,13 +56,13 @@
 			
 			<!-- Main Navigation -->
 			<nav class="mainNav">
-				<ul>
-					<?php 
-						wp_nav_menu(array(
-							'theme_location' => 'top-menu'
-						)); 
-					?>	
-				</ul>
+				<div class="inside">
+				<?php 
+					wp_nav_menu(array(
+						'theme_location' => 'top-menu'
+					)); 
+				?>
+				</div>
 			</nav>
 			
 			<nav class="mobileNav">
