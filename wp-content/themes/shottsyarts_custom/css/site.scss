@@ -19,7 +19,7 @@
 /*-------------------------------------- Structure ---------------------------------------*/
 
 body {
-
+	background: #000;
 }
 
 .body_wrapper {
@@ -132,9 +132,13 @@ header .social_icons {
 /*-------------------------------------- Body Content ---------------------------------------*/
 
 .default_page {
-	margin: 2em 0;
 	@include clearfix;
-	padding: 1em;
+}
+
+/*-------------------------------------- Feature ---------------------------------------*/
+
+div.feature {
+	background: url('images/bg_feature-blue.jpg') center center repeat;
 }
 
 /*-------------------------------------- WP Editor ---------------------------------------*/
@@ -279,7 +283,35 @@ header .social_icons {
 
 footer {
 	clear: left;
-	padding: 1em;
+	@include overlock;
+	background: #000 url('images/bg_footer.jpg') center 0 repeat-x;
+	
+	.contact_us {
+		background: url('images/bg_contact-waffles.png') 0 0 no-repeat;
+	}
+	.contact_form {
+		padding: 1em;
+		@include clearfix;
+		margin-left: 158px;
+		input[type="submit"] {
+			float: right;
+		}
+	}
+	
+	.recent_post {
+		padding: 1em 0 1em 0;
+		color: #FFF;
+	
+		h2 > a {
+			color: $yellow;
+			text-decoration: none;
+		}
+		
+		.more_button {
+			margin: 1.5em 0;
+			float: right;
+		}
+	}
 	
 	.footer_widgets {
 		@include clearfix;
@@ -298,5 +330,6 @@ footer {
 
 
 /*-------------------------------------- Extra Files ---------------------------------------*/
-
+@import "pages/home";
+@import "forms";
 @import "buttons";

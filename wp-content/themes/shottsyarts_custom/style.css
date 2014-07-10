@@ -146,19 +146,22 @@ strong, b {
 
 h1, h2, h3, h4, h5 {
   color: #550067;
-  line-height: 1.2em; }
+  line-height: 1.2em;
+  margin-bottom: 16px; }
 
 h1 {
   font-size: 36px;
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+  margin-bottom: 16px; }
 
 h2 {
   font-size: 24px;
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+  margin-bottom: 16px; }
 
 h3 {
   font-size: 24px;
@@ -319,6 +322,9 @@ h6, h7, h8 {
   display: none; }
 
 /*-------------------------------------- Structure ---------------------------------------*/
+body {
+  background: #000; }
+
 .body_wrapper {
   background: #FFF; }
 
@@ -421,9 +427,7 @@ header .social_icons a.youtube {
 
 /*-------------------------------------- Body Content ---------------------------------------*/
 .default_page {
-  margin: 2em 0;
-  zoom: 1;
-  padding: 1em; }
+  zoom: 1; }
   .default_page:before, .default_page:after {
     content: "\0020";
     display: block;
@@ -431,6 +435,10 @@ header .social_icons a.youtube {
     overflow: hidden; }
   .default_page:after {
     clear: both; }
+
+/*-------------------------------------- Feature ---------------------------------------*/
+div.feature {
+  background: url("images/bg_feature-blue.jpg") center center repeat; }
 
 /*-------------------------------------- WP Editor ---------------------------------------*/
 .wp_content {
@@ -534,7 +542,34 @@ header .social_icons a.youtube {
 /*-------------------------------------- Footer ---------------------------------------*/
 footer {
   clear: left;
-  padding: 1em; }
+  font-family: 'Overlock', cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: black url("images/bg_footer.jpg") center 0 repeat-x; }
+  footer .contact_us {
+    background: url("images/bg_contact-waffles.png") 0 0 no-repeat; }
+  footer .contact_form {
+    padding: 1em;
+    zoom: 1;
+    margin-left: 158px; }
+    footer .contact_form:before, footer .contact_form:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    footer .contact_form:after {
+      clear: both; }
+    footer .contact_form input[type="submit"] {
+      float: right; }
+  footer .recent_post {
+    padding: 1em 0 1em 0;
+    color: #FFF; }
+    footer .recent_post h2 > a {
+      color: #ffd10b;
+      text-decoration: none; }
+    footer .recent_post .more_button {
+      margin: 1.5em 0;
+      float: right; }
   footer .footer_widgets {
     zoom: 1; }
     footer .footer_widgets:before, footer .footer_widgets:after {
@@ -549,13 +584,45 @@ footer {
     margin: 2em 0; }
 
 /*-------------------------------------- Extra Files ---------------------------------------*/
+/*-------------------------------------- Global Input Styles ---------------------------------------*/
+input[type="text"], input[type="email"], textarea {
+  display: block;
+  background: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: .5em 1em;
+  margin: 0;
+  margin-bottom: 1.25em;
+  width: 100%;
+  color: #550067;
+  font-size: 14px; }
+
+input[type="submit"] {
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  border: 1px solid transparent; }
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background: #2b0034; }
+
+.footer .contact_form textarea {
+  height: 95px; }
+
 .button {
   font-size: 16px;
   display: inline-block;
   padding: .35em 1em;
   border-radius: 5px;
   -moz-border-radius: 5px;
-  -webkit-border-radius: 5px; }
+  -webkit-border-radius: 5px;
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none; }
 
 .blue_button {
   color: #FFF;
@@ -575,7 +642,7 @@ footer {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   .purple_button:hover {
-    background: #610076; }
+    background: #33003e; }
 
 .yellow_button {
   color: #550067;

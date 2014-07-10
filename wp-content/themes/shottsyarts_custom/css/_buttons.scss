@@ -3,6 +3,9 @@
 	display: inline-block;
 	padding: .35em 1em;
 	@include round-corners(5px);
+	@include overlock_heavy;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .blue_button {
@@ -19,7 +22,7 @@
 	background: $dark_purple;
 	@include all-transition;
 	&:hover {
-		background: darken($purple, 12%);
+		background: darken($dark_purple, 8%);
 	}
 }
 

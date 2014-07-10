@@ -35,7 +35,7 @@ function silverbox_register_meta_boxes( $meta_boxes )
 		'id' => 'extras',
 
 		// Meta box title - Will appear at the drag and drop handle bar. Required.
-		'title' => __( 'Sidebar Options', 'rwmb' ),
+		'title' => __( 'Additional Options', 'rwmb' ),
 
 		// Post types, accept custom post types as well - DEFAULT is array('post'). Optional.
 		'pages' => array( 'post', 'page' ),
@@ -82,6 +82,19 @@ function silverbox_register_meta_boxes( $meta_boxes )
 				'multiple'    => false,
 				'std'         => '',
 				'placeholder' => __( 'Select an Item', 'rwmb' ),
+			),
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Layer Slider ID', 'rwmb' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}slider",
+				// Field description (optional)
+				'desc'  => __( 'The number found in the layer slider embed code', 'rwmb' ),
+				'type'  => 'text',
+				// Default value (optional)
+				'std'   => __( '1', 'rwmb' ),
+				// CLONES: Add to make the field cloneable (i.e. have multiple value)
+				'clone' => false,
 			),
 		),
 	);

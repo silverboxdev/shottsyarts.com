@@ -1,0 +1,30 @@
+/*-------------------------------------- Global Input Styles ---------------------------------------*/
+
+
+input[type="text"], input[type="email"], textarea {
+	display: block;
+	background: #FFF;
+	border: 1px solid #FFF;
+	@include round-corners(5px);
+	padding: .5em 1em;
+	margin: 0;
+	margin-bottom: 1.25em;
+	width: 100%;
+	color: $dark_purple;
+	font-size: 14px;
+}
+
+input[type="submit"] {
+	@include overlock_heavy;
+	border: 1px solid transparent;
+	&:hover {
+		cursor: pointer;
+		background: darken($dark_purple, 10%);
+	}
+}
+
+// Footer Specific
+
+.footer .contact_form textarea {
+	height: 95px;
+}
