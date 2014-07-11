@@ -1,5 +1,7 @@
 <?php
 	/* Template Name: Homepage Twisted */
+	$twisted = "on";
+
 	get_header();
 		
 	$layer_slide_id = rwmb_meta('silverbox_slider');
@@ -7,20 +9,27 @@
 	if($layer_slide_id == "" || !(isset($layer_slide_id))) {
 		$layer_slide_id = 1;
 	}
+	
+	// Grab Sidebar Selection
+	
+	$sidebar_selection = rwmb_meta( 'silverbox_selection' );
+		
+	// Grab Sidebar Position
+	
+	$sidebar_position = rwmb_meta( 'silverbox_position' );
+	
+	if($sidebar_position == "no_sidebar" || $sidebar_position == "") {
+		$sidebar_class = "span_12 last";
+	}
+	
+	elseif($sidebar_position == "left_sidebar") {
+		$sidebar_class = "span_8 last";
+	}
+	
+	else {
+		$sidebar_class = "span_8";
+	}
 ?>
-
-<script type="text/javascript" language="javascript">
-    jQuery(document).ready(function($) {
-       $('.flexslider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            slideshow: false,
-            pauseOnAction: "true",
-            prevText: "",
-            nextText: ""
-          });
-    });
-</script>
 
 <!-- Start Main Content -->
 
@@ -37,49 +46,12 @@
 	<div class="inside">
 					
 	<article class="wp_content <?= $sidebar_class; ?>" id="wp_content_<?php the_ID(); ?>">
-		<div class="span_6">
-			<?php the_content(); ?>
-		</div>
 		
-		<div class="span_6 omega">
-			<div class="flexslider">
-				<ul class="slides">
-			<?php
-			$args=array(
-			    'post_type' => 'comics',
-			    'post_status' => 'publish',
-			    'posts_per_page' => 5,
-			    'orderby' => 'rand',
-			);
-			
-			$home_feature_query = new WP_Query($args);
-			$x = 0;
-			
-			while ($home_feature_query->have_posts()) : $home_feature_query->the_post(); ?>
-			
-				<?php
-					$post_thumbnail_id = get_post_thumbnail_id();
-					$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-				?> 
-				
-				<li>
-					<a href="<?= the_permalink(); ?>" class="colorbox cboxElement"><?= the_post_thumbnail('full'); ?></a>
-					<h2 class="flex-caption yellow_header"><?= the_title();?></h2>
-				</li>
-				
-				<?php $x++; ?>
-			
-			<?php 
-				endwhile;
-				wp_reset_query();
-			?>
-				</ul>
-				<div class=""
-			</div>
-		</div>
-			
-	</article>
+		<h2><?= the_title(); ?></h2>
+		
+		<?php the_content(); ?>		
 	
+	</article>
 	
 	</div> <!-- / inside -->
 	
