@@ -1,5 +1,5 @@
 <?php
-	/* Template Name: Homepage */
+	/* Template Name: Homepage Twisted */
 	get_header();
 		
 	$layer_slide_id = rwmb_meta('silverbox_slider');
