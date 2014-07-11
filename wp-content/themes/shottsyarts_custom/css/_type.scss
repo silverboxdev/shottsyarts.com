@@ -49,6 +49,7 @@ h4 {
 
 h5 {
 	font-size: 1em;
+	@include overlock_bold;
 }
 
 h6, h7, h8 {
@@ -57,4 +58,15 @@ h6, h7, h8 {
 
 h2.yellow_header {
 	color: $yellow;
+}
+
+
+// Twisted Headers
+
+body.twisted {
+	color: $purple;
+	
+	h1, h2, h3, h4, h5 {
+		color: $purple;
+	}
 }

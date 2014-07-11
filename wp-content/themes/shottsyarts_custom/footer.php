@@ -1,5 +1,17 @@
+<?php	
+	global $twisted;
+	
+	if($twisted == "on") {
+		$footer_class = "twisted";
+	}
+	
+	else {
+		$footer_class = "non-twisted";
+	}
+?>
 
-<footer class="footer">
+
+<footer class="footer <?= $footer_class; ?>">
 
 	<div class="inside">
 

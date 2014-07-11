@@ -1,36 +1,43 @@
-.button {
-	font-size: 16px;
-	display: inline-block;
-	padding: .35em 1em;
-	@include round-corners(5px);
-	@include overlock_heavy;
-	text-transform: uppercase;
-	text-decoration: none;
-}
+body, .wp_content {
 
-.blue_button {
-	color: #FFF;
-	background: $blue;
-	@include all-transition;
-	&:hover {
-		background: darken($blue, 12%);
+	.button {
+		font-size: 16px;
+		display: inline-block;
+		padding: .35em 1.25em;
+		@include round-corners(5px);
+		@include overlock_heavy;
+		text-transform: uppercase;
+		text-decoration: none;
 	}
-}
+	
+	.blue_button {
+		color: #FFF;
+		background: $blue;
+		@include all-transition;
+		&:hover {
+			color: #FFF;
+			background: darken($blue, 12%);
+		}
+	}
+	
+	.purple_button {
+		color: $yellow;
+		background: $dark_purple;
+		@include all-transition;
+		&:hover {
+			color: $yellow;
+			background: darken($dark_purple, 8%);
+		}
+	}
+	
+	.yellow_button {
+		color: $dark_purple;
+		background: $yellow;
+		@include all-transition;
+		&:hover {
+			color: $dark_purple;
+			background: darken($yellow, 8%);
+		}
+	}
 
-.purple_button {
-	color: $yellow;
-	background: $dark_purple;
-	@include all-transition;
-	&:hover {
-		background: darken($dark_purple, 8%);
-	}
-}
-
-.yellow_button {
-	color: $dark_purple;
-	background: $yellow;
-	@include all-transition;
-	&:hover {
-		background: darken($yellow, 12%);
-	}
 }

@@ -67,6 +67,21 @@ header.masthead {
 	}
 }
 
+// Twisted Header...
+
+body.twisted {
+	
+	header.masthead {
+	
+		background: url('images/bg_multi-color.jpg') center center repeat-x;
+		
+		.logo a {
+			background: url('images/logo_twisted-tails.jpg') 0 0 no-repeat;
+		}
+	}
+	
+}
+
 /*-------------------------------------- Navigation ---------------------------------------*/
 
 .mainNav {
@@ -129,6 +144,7 @@ header .social_icons {
 	}
 }
 
+
 footer .social_icons {
 	a.fb {
 		background: url('images/icon_facebook-footer.png') 0 0 no-repeat;
@@ -149,6 +165,31 @@ footer .social_icons {
 		}
 	}
 }
+
+// Twisted Icons
+
+body.twisted {
+	header .social_icons, footer .social_icons {
+		a.fb {
+			background: url('images/icon_facebook-footer.png') 0 -30px no-repeat;
+			&:hover {
+				background-position: 0 0;
+			}
+		}
+		a.twitter {
+			background: url('images/icon_twitter-footer.png') 0 -30px no-repeat;
+			&:hover {
+				background-position: 0 0;
+			}
+		}
+		a.youtube {
+			background: url('images/icon_youtube-footer.png') 0 -30px no-repeat;
+			&:hover {
+				background-position: 0 0;
+			}
+		}
+	}
+}
 /*-------------------------------------- Body Content ---------------------------------------*/
 
 .default_page {
@@ -159,6 +200,16 @@ footer .social_icons {
 
 div.feature {
 	background: url('images/bg_feature-blue.jpg') center center repeat;
+}
+
+// Twisted
+
+body.twisted {
+	
+	div.feature {
+		background: url('images/bg_feature-purple.jpg') center center repeat;
+	}
+	
 }
 
 /*-------------------------------------- WP Editor ---------------------------------------*/
@@ -179,8 +230,10 @@ div.feature {
 		color: $link_color;
 		text-decoration: underline;
 		@include color-transition;
+		@include overlock_bold;
 		&:hover {
 			color: $link_color;
+			text-decoration: none;
 		}
 	}
 	
@@ -215,9 +268,16 @@ div.feature {
 	
 	blockquote {
 		margin: 1em 3em;
-		color: #666;
-		border-left: 2px solid #666;
+		border-left: 2px solid $dark_purple;
 		padding-left: 1em;
+		font-style: italic;
+	}
+	
+	hr {
+		height: 2px;
+		border: none;
+		background: $dark_purple;
+		margin: 1.25em 0;
 	}
 	
 	// Form Elements
@@ -359,6 +419,35 @@ footer {
 			}
 		}
 	}
+}
+
+// Twisted
+
+body.twisted footer {
+	
+	.contact_us {
+		background: transparent;
+		
+		h2 {
+			color: $yellow;
+		}
+	}
+	.contact_form {
+		padding: 1em;
+		@include clearfix;
+		margin-left: 0;
+		input[type="submit"] {
+			float: none;
+			background: $yellow;
+			color: $dark_purple;
+			@include all-transition;
+			
+			&:hover {
+				background: darken($yellow, 12%);
+			}
+		}
+	}
+
 }
 
 *[class*="span_"] {

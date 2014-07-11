@@ -1,3 +1,15 @@
+<?php
+
+	global $twisted;
+
+	if($twisted == "on") {
+		$body_class = "twisted";
+	}
+	else {
+		$body_class = "non-twisted";
+	}
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -25,7 +37,7 @@
 		
 	</head>
 	
-	<body>
+	<body class="<?php echo $body_class; ?>">
 		
 		<div class="body_wrapper">
 		

@@ -176,13 +176,21 @@ h4 {
   font-style: normal; }
 
 h5 {
-  font-size: 1em; }
+  font-size: 1em;
+  font-family: 'Overlock', cursive;
+  font-weight: 700;
+  font-style: normal; }
 
 h6, h7, h8 {
   font-size: .85em; }
 
 h2.yellow_header {
   color: #ffd10b; }
+
+body.twisted {
+  color: #9300b3; }
+  body.twisted h1, body.twisted h2, body.twisted h3, body.twisted h4, body.twisted h5 {
+    color: #9300b3; }
 
 /*-------------------------------------- Column Creation ---------------------------------------*/
 .span_12 {
@@ -384,6 +392,11 @@ header.masthead {
       header.masthead .logo a:hover {
         background-position: 0 -250px; }
 
+body.twisted header.masthead {
+  background: url("images/bg_multi-color.jpg") center center repeat-x; }
+  body.twisted header.masthead .logo a {
+    background: url("images/logo_twisted-tails.jpg") 0 0 no-repeat; }
+
 /*-------------------------------------- Navigation ---------------------------------------*/
 .mainNav {
   width: 100%;
@@ -441,6 +454,19 @@ footer .social_icons a.youtube {
   footer .social_icons a.youtube:hover {
     background-position: 0 -30px; }
 
+body.twisted header .social_icons a.fb, body.twisted footer .social_icons a.fb {
+  background: url("images/icon_facebook-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.fb:hover, body.twisted footer .social_icons a.fb:hover {
+    background-position: 0 0; }
+body.twisted header .social_icons a.twitter, body.twisted footer .social_icons a.twitter {
+  background: url("images/icon_twitter-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.twitter:hover, body.twisted footer .social_icons a.twitter:hover {
+    background-position: 0 0; }
+body.twisted header .social_icons a.youtube, body.twisted footer .social_icons a.youtube {
+  background: url("images/icon_youtube-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.youtube:hover, body.twisted footer .social_icons a.youtube:hover {
+    background-position: 0 0; }
+
 /*-------------------------------------- Body Content ---------------------------------------*/
 .default_page {
   zoom: 1; }
@@ -456,6 +482,9 @@ footer .social_icons a.youtube {
 div.feature {
   background: url("images/bg_feature-blue.jpg") center center repeat; }
 
+body.twisted div.feature {
+  background: url("images/bg_feature-purple.jpg") center center repeat; }
+
 /*-------------------------------------- WP Editor ---------------------------------------*/
 .wp_content {
   padding: 3em 0; }
@@ -469,9 +498,13 @@ div.feature {
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
-    transition: color 0.2s ease; }
+    transition: color 0.2s ease;
+    font-family: 'Overlock', cursive;
+    font-weight: 700;
+    font-style: normal; }
     .wp_content a:hover {
-      color: #00a9d3; }
+      color: #00a9d3;
+      text-decoration: none; }
   .wp_content ol {
     margin: 1em 0 1em 1.15em; }
     .wp_content ol li {
@@ -491,9 +524,14 @@ div.feature {
     font-style: italic; }
   .wp_content blockquote {
     margin: 1em 3em;
-    color: #666;
-    border-left: 2px solid #666;
-    padding-left: 1em; }
+    border-left: 2px solid #550067;
+    padding-left: 1em;
+    font-style: italic; }
+  .wp_content hr {
+    height: 2px;
+    border: none;
+    background: #550067;
+    margin: 1.25em 0; }
   .wp_content input[type="text"], .wp_content textarea, .wp_content input[type="email"] {
     background: #FFF;
     display: block;
@@ -610,6 +648,32 @@ footer {
       footer .copyright a:hover {
         color: #690080; }
 
+body.twisted footer .contact_us {
+  background: transparent; }
+  body.twisted footer .contact_us h2 {
+    color: #ffd10b; }
+body.twisted footer .contact_form {
+  padding: 1em;
+  zoom: 1;
+  margin-left: 0; }
+  body.twisted footer .contact_form:before, body.twisted footer .contact_form:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  body.twisted footer .contact_form:after {
+    clear: both; }
+  body.twisted footer .contact_form input[type="submit"] {
+    float: none;
+    background: #ffd10b;
+    color: #550067;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    body.twisted footer .contact_form input[type="submit"]:hover {
+      background: #cda600; }
+
 /*-------------------------------------- Extra Files ---------------------------------------*/
 .wp_content ul.slides {
   margin: 0; }
@@ -685,10 +749,10 @@ input[type="submit"] {
 .footer .contact_form textarea {
   height: 95px; }
 
-.button {
+body .button, .wp_content .button {
   font-size: 16px;
   display: inline-block;
-  padding: .35em 1em;
+  padding: .35em 1.25em;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -697,33 +761,33 @@ input[type="submit"] {
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none; }
-
-.blue_button {
+body .blue_button, .wp_content .blue_button {
   color: #FFF;
   background: #00a9d3;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-  .blue_button:hover {
+  body .blue_button:hover, .wp_content .blue_button:hover {
+    color: #FFF;
     background: #007896; }
-
-.purple_button {
+body .purple_button, .wp_content .purple_button {
   color: #ffd10b;
   background: #550067;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-  .purple_button:hover {
+  body .purple_button:hover, .wp_content .purple_button:hover {
+    color: #ffd10b;
     background: #33003e; }
-
-.yellow_button {
+body .yellow_button, .wp_content .yellow_button {
   color: #550067;
   background: #ffd10b;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-  .yellow_button:hover {
-    background: #cda600; }
+  body .yellow_button:hover, .wp_content .yellow_button:hover {
+    color: #550067;
+    background: #e1b700; }
