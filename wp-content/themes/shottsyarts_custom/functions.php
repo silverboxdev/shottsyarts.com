@@ -129,7 +129,7 @@ if(function_exists('register_sidebar')) {
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
        global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+	return '<p><a class="button blue_button" href="'. get_permalink($post->ID) . '">Read More</a></p>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

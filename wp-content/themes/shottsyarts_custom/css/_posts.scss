@@ -1,0 +1,11 @@
+.post_body {
+	
+	.f_image {
+		@include span-columns(2 of 8);
+	}
+	
+	.f_copy {
+		@include span-columns(6 of 8);
+	}
+	
+}

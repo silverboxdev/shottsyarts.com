@@ -14,10 +14,10 @@
 	<div class="inside">
 					
 	<article class="wp_content span_9" id="wp_content_<?php the_ID(); ?>">
-				
-			<h1 class="pg_title" style="text-align: left;"><?php single_cat_title(__('Showing Posts From: ', 'adaptive-framework'), true); ?></h1>	
-
-		<?php get_template_part('posts', get_post_format()); ?>
+		
+		<h1><?= the_title(); ?></h1>
+		
+		<?= the_content(); ?>
 			
 	</article>
 	

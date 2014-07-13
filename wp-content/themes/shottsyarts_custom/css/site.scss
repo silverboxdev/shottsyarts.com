@@ -30,6 +30,30 @@ section.inside, div.inside, article.inside {
 	@include outer-container();
 }
 
+aside {
+	padding: 3em 0;
+	
+	.sidebar-widget {
+		margin-bottom: 1em;
+		
+		ul {
+			margin: 1em 0 1em 1.15em;
+			li {
+				list-style: disc;
+				padding: .25em;
+			}
+		}
+		
+		a {
+			color: $purple;
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
 /*-------------------------------------- Header ---------------------------------------*/
 
 
@@ -358,6 +382,21 @@ body.twisted {
 	
 }
 
+/*-------------------------------------- Blog List ---------------------------------------*/
+
+article#wp_content_1 {
+	h1 {
+		font-size: 24px;
+	}
+	
+	a.post_title {
+		text-decoration: none;
+		color: $dark_purple;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
 
 /*-------------------------------------- Footer ---------------------------------------*/
 
@@ -460,3 +499,4 @@ body.twisted footer {
 @import "pages/home";
 @import "forms";
 @import "buttons";
+@import "posts";
