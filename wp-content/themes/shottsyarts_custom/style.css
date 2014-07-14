@@ -502,7 +502,15 @@ body.twisted div.feature {
 
 /*-------------------------------------- WP Editor ---------------------------------------*/
 .wp_content {
-  padding: 3em 0; }
+  padding: 3em 0;
+  zoom: 1; }
+  .wp_content:before, .wp_content:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .wp_content:after {
+    clear: both; }
   .wp_content div, .wp_content p, .wp_content ol, .wp_content ul, .wp_content dl, .wp_content dd, .wp_content table {
     line-height: 1.25em; }
   .wp_content p {
@@ -650,6 +658,8 @@ footer {
     footer .recent_post .more_button {
       margin: 1.5em 0;
       float: right; }
+    footer .recent_post .read_more {
+      display: none; }
   footer .footer_widgets {
     zoom: 1; }
     footer .footer_widgets:before, footer .footer_widgets:after {

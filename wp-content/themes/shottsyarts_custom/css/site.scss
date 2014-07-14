@@ -241,6 +241,7 @@ body.twisted {
 
 .wp_content {
 	padding: 3em 0;
+	@include clearfix;
 	
 	div, p, ol, ul, dl, dd, table {
 		line-height: 1.25em;
@@ -433,6 +434,10 @@ footer {
 		.more_button {
 			margin: 1.5em 0;
 			float: right;
+		}
+		
+		.read_more {
+			display: none;
 		}
 	}
 	
