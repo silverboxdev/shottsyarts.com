@@ -840,3 +840,94 @@ body .yellow_button, .wp_content .yellow_button {
   width: 74.10533%; }
   .post_body .f_copy:last-child {
     margin-right: 0; }
+
+.woocommerce #content div.product p.price, .woocommerce #content div.product span.price, .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce-page #content div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page div.product span.price, .woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
+  color: #00a9d3 !important; }
+
+.woocommerce h1.product_title, .woocommerce h1.entry-title {
+  font-size: 24px; }
+
+.woocommerce p {
+  margin: 1em 0; }
+
+div.body_wrapper h1.archive-content-title {
+  margin-top: 1em; }
+div.body_wrapper .woocommerce .woocommerce-breadcrumb, div.body_wrapper .woocommerce-page .woocommerce-breadcrumb {
+  margin: 1em 0; }
+div.body_wrapper .woocommerce #content input.button.alt, div.body_wrapper .woocommerce #respond input#submit.alt, div.body_wrapper .woocommerce a.button.alt, div.body_wrapper .woocommerce button.button.alt, div.body_wrapper .woocommerce input.button.alt, div.body_wrapper .woocommerce-page #content input.button.alt, div.body_wrapper .woocommerce-page #respond input#submit.alt, div.body_wrapper .woocommerce-page a.button.alt, div.body_wrapper .woocommerce-page button.button.alt, div.body_wrapper .woocommerce-page input.button.alt, div.body_wrapper .woocommerce #content input.button, div.body_wrapper .woocommerce #respond input#submit, div.body_wrapper .woocommerce a.button, div.body_wrapper .woocommerce button.button, div.body_wrapper .woocommerce input.button, div.body_wrapper .woocommerce-page #content input.button, div.body_wrapper .woocommerce-page #respond input#submit, div.body_wrapper .woocommerce-page a.button, div.body_wrapper .woocommerce-page button.button, div.body_wrapper .woocommerce-page input.button, div.body_wrapper .added_to_cart {
+  font-size: 16px;
+  display: inline-block;
+  padding: .35em 1.25em !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffd10b;
+  background: #550067;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-shadow: none;
+  font-weight: 700; }
+  div.body_wrapper .woocommerce #content input.button.alt:hover, div.body_wrapper .woocommerce #respond input#submit.alt:hover, div.body_wrapper .woocommerce a.button.alt:hover, div.body_wrapper .woocommerce button.button.alt:hover, div.body_wrapper .woocommerce input.button.alt:hover, div.body_wrapper .woocommerce-page #content input.button.alt:hover, div.body_wrapper .woocommerce-page #respond input#submit.alt:hover, div.body_wrapper .woocommerce-page a.button.alt:hover, div.body_wrapper .woocommerce-page button.button.alt:hover, div.body_wrapper .woocommerce-page input.button.alt:hover, div.body_wrapper .woocommerce #content input.button:hover, div.body_wrapper .woocommerce #respond input#submit:hover, div.body_wrapper .woocommerce a.button:hover, div.body_wrapper .woocommerce button.button:hover, div.body_wrapper .woocommerce input.button:hover, div.body_wrapper .woocommerce-page #content input.button:hover, div.body_wrapper .woocommerce-page #respond input#submit:hover, div.body_wrapper .woocommerce-page a.button:hover, div.body_wrapper .woocommerce-page button.button:hover, div.body_wrapper .woocommerce-page input.button:hover, div.body_wrapper .added_to_cart:hover {
+    color: #ffd10b;
+    background: #33003e; }
+div.body_wrapper a.added_to_cart, div.body_wrapper input.added_to_cart, div.body_wrapper button.added_to_cart {
+  margin-top: 1em;
+  background: #00a9d3;
+  color: #FFF;
+  padding: 4px 20px !important; }
+  div.body_wrapper a.added_to_cart:hover, div.body_wrapper input.added_to_cart:hover, div.body_wrapper button.added_to_cart:hover {
+    background: #007896;
+    color: #FFF; }
+div.body_wrapper a.shipping-calculator-button {
+  font-size: 16px;
+  display: inline-block;
+  padding: .35em 1.25em !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffd10b;
+  background: #550067;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-shadow: none;
+  font-weight: 700; }
+  div.body_wrapper a.shipping-calculator-button:hover {
+    color: #ffd10b;
+    background: #33003e; }
+div.body_wrapper input[type="text"], div.body_wrapper input[type="email"], div.body_wrapper textarea {
+  display: block;
+  background: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: .5em 1em;
+  margin: 0;
+  margin-bottom: 1.25em;
+  width: 100%;
+  color: #550067;
+  font-size: 14px; }
+div.body_wrapper input[type="submit"] {
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  border: 1px solid transparent; }
+  div.body_wrapper input[type="submit"]:hover {
+    cursor: pointer;
+    background: #2b0034; }

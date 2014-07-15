@@ -215,4 +215,44 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 require_once($_SERVER['DOCUMENT_ROOT'] . "/wp-content/themes/shottsyarts_custom/functions/shortcodes.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/wp-content/themes/shottsyarts_custom/functions/metaboxes.php");
 
+/***********************************************************************************/
+/* Woo Commerce */
+/***********************************************************************************/
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '<section class="woocommerce"><div class="inside">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</div></section>';
+}
+
+add_theme_support( 'woocommerce' );
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
+function jk_change_breadcrumb_home_text( $defaults ) {
+    // Change the breadcrumb home text from 'Home' to 'Appartment'
+	$defaults['home'] = 'Store';
+	return $defaults;
+}
+
+add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+function woo_custom_breadrumb_home_url() {
+    return '/store';
+}
+
+add_action('template_redirect', 'remove_shop_breadcrumbs' );
+function remove_shop_breadcrumbs(){
+ 
+    if (is_shop()) {
+        remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+    }
+ 
+}
+
 ?>

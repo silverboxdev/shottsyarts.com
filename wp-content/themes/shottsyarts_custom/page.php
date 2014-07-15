@@ -20,13 +20,30 @@
 	else {
 		$sidebar_class = "span_8";
 	}
+	
+	// Layer Slider
+	
+	$layer_slide_id = rwmb_meta('silverbox_slider');
+	
 ?>
 
 <!-- Start Main Content -->
 
 <section <?php post_class('default_page'); ?> id="post-<?php the_ID(); ?>">
+
+	<div class="inside">
 		
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+	
+	<?php if($layer_slide_id != "" && (isset($layer_slide_id))) { ?>
+	
+	<div class="feature">
+	
+		<?php layerslider($layer_slide_id); ?>
+		
+	</div>
+	
+	<? } ?>
 
 	<!-- WP Content -->
 	
@@ -60,6 +77,8 @@
 	
 	
 	<?php endwhile; endif; ?>
+	
+	</div> <!-- //inside -->
 		
 </section>
 
