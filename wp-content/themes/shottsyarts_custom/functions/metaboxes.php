@@ -92,7 +92,7 @@ function silverbox_register_meta_boxes( $meta_boxes )
 				'desc'  => __( 'The number found in the layer slider embed code', 'rwmb' ),
 				'type'  => 'text',
 				// Default value (optional)
-				'std'   => __( '1', 'rwmb' ),
+				'std'   => __( '', 'rwmb' ),
 				// CLONES: Add to make the field cloneable (i.e. have multiple value)
 				'clone' => false,
 			),
