@@ -56,14 +56,23 @@
 					</div>
 				
 					<div class="logo">
-						<a href="/">Shottsy Arts</a>
+						<a href="/" class="full_screen_logo">
+						<?php if($twisted != "on") { ?>
+							<img src="<?= IMAGES; ?>/logo_responsive.jpg" alt="Shottsy Arts" class="mobile_only" />
+						<?php } else { ?>
+							<img src="<?= IMAGES; ?>/logo_twisted-tails.jpg" alt="Shottsy Arts" class="mobile_only" />
+						<?php } ?>
+						</a>
 					</div>
 				
 				</div> <!-- /inside -->
 				
 				</div> <!-- /head_wrap-->
 				
-				<a href="#" class="navTrigger mobile_only">Trigger</a>
+				<div class="trigger_contain">
+					<a href="#" class="navTrigger mobile_only">Trigger</a>
+				</div>
+				
 			</header>
 			
 			<!-- Main Navigation -->

@@ -1,0 +1,87 @@
+/***********************************************************************************/
+/* 940 Initial Breakpoint */
+/***********************************************************************************/
+
+.mobile_only {
+	display: block;
+}
+
+img, iframe, video, embed {
+	max-width: 100% !important;
+}
+
+header.masthead {
+	
+	.logo {
+		
+		a {
+			background-image: none;
+			width: 100%;
+			height: auto;
+			display: inline;
+		}
+	}
+}
+
+.inside {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+header .inside {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+header .social_icons {
+	padding-right: 1em;
+}
+
+// Twisted Header...
+
+body.twisted header.masthead .logo a {
+	background-image: none;
+	width: 100%;
+	height: auto;
+	display: inline;
+}
+
+/***********************************************************************************/
+/* iPad Portrait Menu */
+/***********************************************************************************/
+
+@media screen and (max-width: 768px) {
+	.mainNav {
+		display: none;
+	}
+	
+	.mobileNav {
+		display: block;
+		
+		ul {
+			
+			background: $dark_purple;
+		
+			li {
+				a {
+					display: block;
+					text-decoration: none;
+					background: $dark_purple;
+					padding: .65em;
+					text-align: center;
+					color: $yellow;
+					font-size: 20px;
+					border-bottom: 1px solid $purple;
+					
+					&:hover {
+						background: $blue;
+						color: #FFF;
+					}
+				}
+			}
+		}
+		
+	}
+	
+}
+
