@@ -70,7 +70,7 @@
 				</div> <!-- /head_wrap-->
 				
 				<div class="trigger_contain">
-					<a href="#" class="navTrigger mobile_only">Trigger</a>
+					<a href="#" class="navTrigger">Trigger</a>
 				</div>
 				
 			</header>

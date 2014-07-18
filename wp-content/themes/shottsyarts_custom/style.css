@@ -329,7 +329,7 @@ body.twisted {
   margin-right: 0; }
 
 /*-------------------------------------- Global Styles ---------------------------------------*/
-.mobile_only, .mobileNav {
+.mobile_only, .mobileNav, .navTrigger {
   display: none; }
 
 /*-------------------------------------- Structure ---------------------------------------*/
@@ -464,22 +464,6 @@ body.twisted header.masthead {
           left: 99%; }
   .mainNav ul li.hover_nav > a {
     color: #00a9d3; }
-
-/* Nav Trigger */
-.trigger_contain {
-  text-align: center;
-  margin: auto;
-  background: #550067; }
-
-.navTrigger {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: auto;
-  text-indent: -999em;
-  background: url("images/icon_nav-trigger.png") 0 0 no-repeat; }
-  .navTrigger:hover {
-    background-position: 0 -40px; }
 
 /*-------------------------------------- Social Media Icons ---------------------------------------*/
 .social_icons a {
@@ -1035,8 +1019,27 @@ div.body_wrapper input[type="submit"] {
   .mainNav {
     display: none; }
 
+  /* Nav Trigger */
+  .trigger_contain {
+    text-align: center;
+    margin: auto;
+    background: #550067; }
+
+  .navTrigger {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    text-indent: -999em;
+    background: url("images/icon_nav-trigger.png") 0 0 no-repeat; }
+    .navTrigger:hover {
+      background-position: 0 -40px; }
+
+  .triggerActive {
+    background-position: 0 -40px; }
+
   .mobileNav {
-    display: block; }
+    display: none; }
     .mobileNav ul {
       background: #550067; }
       .mobileNav ul li a {
@@ -1047,7 +1050,22 @@ div.body_wrapper input[type="submit"] {
         text-align: center;
         color: #ffd10b;
         font-size: 20px;
-        border-bottom: 1px solid #9300b3; }
+        border-bottom: 1px solid #9300b3;
+        text-transform: uppercase; }
         .mobileNav ul li a:hover {
           background: #00a9d3;
-          color: #FFF; } }
+          color: #FFF; }
+      .mobileNav ul li ul {
+        background: #9300b3; }
+        .mobileNav ul li ul li a {
+          color: #ffd10b;
+          background: #9300b3;
+          border-color: #550067;
+          text-transform: capitalize; }
+        .mobileNav ul li ul li ul {
+          display: none; }
+
+  .see_more {
+    position: absolute;
+    top: 0;
+    right: 10px; } }

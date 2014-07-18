@@ -55,8 +55,32 @@ body.twisted header.masthead .logo a {
 		display: none;
 	}
 	
-	.mobileNav {
+	/* Nav Trigger */
+
+	.trigger_contain {
+		text-align: center;
+		margin: auto;
+		background: $dark_purple;
+	}
+	
+	.navTrigger {
 		display: block;
+		width: 40px;
+		height: 40px;
+		margin: auto;
+		text-indent: -999em;
+		background: url('images/icon_nav-trigger.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -40px;
+		}
+	}
+	
+	.triggerActive {
+		background-position: 0 -40px;
+	}
+	
+	.mobileNav {
+		display: none;
 		
 		ul {
 			
@@ -72,16 +96,42 @@ body.twisted header.masthead .logo a {
 					color: $yellow;
 					font-size: 20px;
 					border-bottom: 1px solid $purple;
+					text-transform: uppercase;
 					
 					&:hover {
 						background: $blue;
 						color: #FFF;
 					}
 				}
+				ul {
+					background: $purple;
+					
+					li {
+						a {
+							color: $yellow;
+							background: $purple;
+							border-color: $dark_purple;
+							text-transform: capitalize;
+							&:hover {
+								
+							}
+						}
+						
+						ul {
+							display: none;
+						}
+					}
+				}
 			}
 		}
 		
 	}
-	
+
+	.see_more {
+		position: absolute;
+		top: 0;
+		right: 10px;
+	}
+		
 }
 

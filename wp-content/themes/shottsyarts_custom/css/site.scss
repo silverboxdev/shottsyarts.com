@@ -12,7 +12,7 @@
 
 /*-------------------------------------- Global Styles ---------------------------------------*/
 
-.mobile_only, .mobileNav {
+.mobile_only, .mobileNav, .navTrigger {
 	display: none;
 }
 
@@ -174,26 +174,6 @@ body.twisted {
 		li.hover_nav > a {
 			color: $blue;
 		}
-	}
-}
-
-/* Nav Trigger */
-
-.trigger_contain {
-	text-align: center;
-	margin: auto;
-	background: $dark_purple;
-}
-
-.navTrigger {
-	display: block;
-	width: 40px;
-	height: 40px;
-	margin: auto;
-	text-indent: -999em;
-	background: url('images/icon_nav-trigger.png') 0 0 no-repeat;
-	&:hover {
-		background-position: 0 -40px;
 	}
 }
 

@@ -38,8 +38,37 @@ $(document).ready(function() {
 		 e.preventDefault();
 	 });
 	 
-});
-
-$(window).load(function() {
-
+	 // Mobile Dropdowns
+	 $('.mobileNav li.menu-item-has-children ul li.menu-item-has-children').css('position', 'relative').append('<span class="see_more"><img src="' + theme_path + '/images/btn-plus.png" alt="See More" /></span>');
+	 $('.mobileNav li.menu-item-has-children ul li.menu-item-has-children').click(function(e) {
+	 	$(this).find('ul:first').stop().slideToggle(600);
+	 	e.preventDefault();
+	 });
+	 
+	 // window resize
+	 
+	 var $window = $(window);
+     
+    function checkWidth() {
+	    
+	    var windowsize = $window.width();
+        
+        // IF window is Wide
+        if (windowsize > 768) {        		
+				$('.mainNav').show();
+				$('.mobileNav').hide();
+				
+			}
+			// IF Window is Narrow
+			else {
+				$('.mainNav').hide();
+			}		
+			
+    }
+    
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+	 
 });
