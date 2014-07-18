@@ -31,49 +31,48 @@
 
 <section <?php post_class('default_page'); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="inside">
-		
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-	
-	<?php if($layer_slide_id != "" && (isset($layer_slide_id))) { ?>
-	
-	<div class="feature">
-	
-		<?php layerslider($layer_slide_id); ?>
-		
-	</div>
-	
-	<? } ?>
 
-	<!-- WP Content -->
-	
-	
-	<!-- If Left Sidebar -->
-	<?php if($sidebar_position == "left_sidebar") { ?>
-	
-		<aside class="sidebar span_4">
+		<?php if($layer_slide_id != "" && (isset($layer_slide_id))) { ?>
+		
+		<div class="feature">
+		
+			<?php layerslider($layer_slide_id); ?>
 			
-			<?php if (is_active_sidebar($sidebar_selection)) : ?>
-				<?php dynamic_sidebar($sidebar_selection); ?>
-			<?php endif;?>
-			
-		</aside>
-	<? } ?>
-					
-	<article class="wp_content <?= $sidebar_class; ?>" id="wp_content_<?php the_ID(); ?>">
-			
-		<?php the_content(); ?>
-			
-	</article>
+		</div>
+		
+		<? } ?>
 	
-	<!-- If Right Sidebar -->
-	<?php if($sidebar_position == "right_sidebar") { ?>
-		<aside class="sidebar span_4 last">
-			<?php if (is_active_sidebar($sidebar_selection)) : ?>
-				<?php dynamic_sidebar($sidebar_selection); ?>
-			<?php endif;?>
-		</aside>
-	<? } ?>
+		<div class="inside">
+				
+		<!-- If Left Sidebar -->
+		<?php if($sidebar_position == "left_sidebar") { ?>
+		
+			<aside class="sidebar span_4">
+				
+				<?php if (is_active_sidebar($sidebar_selection)) : ?>
+					<?php dynamic_sidebar($sidebar_selection); ?>
+				<?php endif;?>
+				
+			</aside>
+		<? } ?>
+		
+		<!-- Wp Content -->
+						
+		<article class="wp_content <?= $sidebar_class; ?>" id="wp_content_<?php the_ID(); ?>">
+				
+			<?php the_content(); ?>
+				
+		</article>
+		
+		<!-- If Right Sidebar -->
+		<?php if($sidebar_position == "right_sidebar") { ?>
+			<aside class="sidebar span_4 last">
+				<?php if (is_active_sidebar($sidebar_selection)) : ?>
+					<?php dynamic_sidebar($sidebar_selection); ?>
+				<?php endif;?>
+			</aside>
+		<? } ?>
 	
 	
 	<?php endwhile; endif; ?>
