@@ -45,6 +45,12 @@ $(document).ready(function() {
 	 	e.preventDefault();
 	 });
 	 
+	 // Mobile - Do Not Link
+	 
+	 $('nav ul li.no_link').find('a:first').click(function(e) {
+		 e.preventDefault();
+	 });
+	 
 	 // window resize
 	 
 	 var $window = $(window);
