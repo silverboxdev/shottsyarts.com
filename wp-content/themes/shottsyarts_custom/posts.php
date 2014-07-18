@@ -2,13 +2,13 @@
 
 	<div class="f_image">
 	
-		<?php echo the_post_thumbnail(array(150,150)); ?>
+		<a href="<?= the_permalink(); ?>"><?php echo the_post_thumbnail(array(150,150)); ?></a>
 
 	</div>
 	
 	<div class="f_copy">
 	
-		<a href="<?= the_permalink(); ?>" class="post_title"><h1><?= the_title(); ?></h1></a>
+		<h1><a href="<?= the_permalink(); ?>" class="post_title"><?= the_title(); ?></a></h1>
 		
 		<?php echo the_excerpt(); ?>
 	

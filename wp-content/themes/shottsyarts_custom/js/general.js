@@ -48,7 +48,7 @@ $(document).ready(function() {
 	 
 	 // Mobile - Do Not Link
 	  $('nav.mainNav ul li.no_link').find('a:first').click(function(e) {
-		 //e.preventDefault();
+		 e.preventDefault();
 	 });
 	 
 	 $('.mobileNav ul li.menu-item-29').find('a:first').hide();

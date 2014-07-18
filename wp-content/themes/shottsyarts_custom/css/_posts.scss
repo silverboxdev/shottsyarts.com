@@ -1,4 +1,7 @@
 .post_body {
+
+	@include clearfix;
+	margin-bottom: 2em;
 	
 	.f_image {
 		@include span-columns(2 of 8);
@@ -6,6 +9,15 @@
 	
 	.f_copy {
 		@include span-columns(6 of 8);
+	}
+	
+	a.post_title {
+		color: $dark_purple;
+		text-decoration: none;
+		@include color-transition;
+		&:hover {
+			color: $blue;
+		}
 	}
 	
 }

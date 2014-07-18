@@ -890,20 +890,39 @@ body .yellow_button, .wp_content .yellow_button {
     color: #550067;
     background: #e1b700; }
 
-.post_body .f_image {
-  display: block;
-  float: left;
-  margin-right: 3.57866%;
-  width: 22.316%; }
-  .post_body .f_image:last-child {
-    margin-right: 0; }
-.post_body .f_copy {
-  display: block;
-  float: left;
-  margin-right: 3.57866%;
-  width: 74.10533%; }
-  .post_body .f_copy:last-child {
-    margin-right: 0; }
+.post_body {
+  zoom: 1;
+  margin-bottom: 2em; }
+  .post_body:before, .post_body:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .post_body:after {
+    clear: both; }
+  .post_body .f_image {
+    display: block;
+    float: left;
+    margin-right: 3.57866%;
+    width: 22.316%; }
+    .post_body .f_image:last-child {
+      margin-right: 0; }
+  .post_body .f_copy {
+    display: block;
+    float: left;
+    margin-right: 3.57866%;
+    width: 74.10533%; }
+    .post_body .f_copy:last-child {
+      margin-right: 0; }
+  .post_body a.post_title {
+    color: #550067;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    .post_body a.post_title:hover {
+      color: #00a9d3; }
 
 .woocommerce #content div.product p.price, .woocommerce #content div.product span.price, .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce-page #content div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page div.product span.price, .woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
   color: #00a9d3 !important; }
