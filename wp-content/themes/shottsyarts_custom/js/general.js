@@ -40,16 +40,18 @@ $(document).ready(function() {
 	 
 	 // Mobile Dropdowns
 	 $('.mobileNav li.menu-item-has-children ul li.menu-item-has-children').css('position', 'relative').append('<span class="see_more"><img src="' + theme_path + '/images/btn-plus.png" alt="See More" /></span>');
-	 $('.mobileNav li.menu-item-has-children ul li.menu-item-has-children').click(function(e) {
-	 	$(this).find('ul:first').stop().slideToggle(600);
+	 
+	 $('.mobileNav li.menu-item-has-children ul > li.menu-item-has-children').find('a:first').click(function(e) {
+	 	$(this).parent().find('ul:first').stop().slideToggle(600);
 	 	e.preventDefault();
 	 });
 	 
 	 // Mobile - Do Not Link
-	 
-	 $('nav ul li.no_link').find('a:first').click(function(e) {
-		 e.preventDefault();
+	  $('nav.mainNav ul li.no_link').find('a:first').click(function(e) {
+		 //e.preventDefault();
 	 });
+	 
+	 $('.mobileNav ul li.menu-item-29').find('a:first').hide();
 	 
 	 // window resize
 	 

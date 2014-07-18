@@ -5,18 +5,7 @@
 	.flexslider {
 		height: 470px;
 	}
-	
-	@media screen and (max-width: 939px) {
-		.flexslider {
-			height: auto;
-			
-			img {
-				width: 100% !important;
-				height: auto !important;
-			}
-		}
-	}
-	
+
 	ul.slides {
 		@include clearfix;
 		margin: 0;
@@ -51,7 +40,7 @@
 			display: inline-block;
 			width: 30px;
 			height: 50px;
-			background: $dark_purple;
+			//background: $dark_purple;
 			
 			a {
 				display: block;
@@ -63,15 +52,15 @@
 			}
 			
 			a.flex-prev {
-				background: $dark_purple url('images/slider_arrow_prev.png') 0 0 no-repeat;
-				left: 2%;
+				background:  url('images/slider_arrow_prev.png') 0 0 no-repeat;
+				left: 3px;
 			}
 
 			a.flex-next {
 				width: 24px;
-				background: $dark_purple url('images/slider_arrow_next.png') 0 0 no-repeat;
+				background:  url('images/slider_arrow_next.png') 0 0 no-repeat;
 				right: 0;
-				padding-right: 2%;
+				padding-right: 3px;
 			}
 			
 		}
@@ -79,9 +68,39 @@
 	
 	h2.flex-caption {
 		text-align: center;
+		height: 50px;
 		background: $dark_purple;
 		padding: .5em 0;
 		z-index: 9999;
+		color: $yellow;
 		position: relative;
 	}	
+}
+
+@media screen and (max-width: 939px) {
+
+	.wp_content {
+		.flexslider {
+			height: auto;
+			
+			img {
+				width: 100% !important;
+				height: auto !important;
+			}
+		}
+	}
+}
+
+// Mobile Fixes for Flex Slider
+@media screen and (max-width: 320px) {
+	
+	.wp_content {
+		h2.flex-caption {
+			height: 52px;
+			padding-top: 16px;
+			font-size: 16px;
+		}
+	}
+	
+	
 }

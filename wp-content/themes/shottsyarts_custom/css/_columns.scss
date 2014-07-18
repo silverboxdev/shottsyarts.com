@@ -84,3 +84,15 @@
 .omega, .last {
 	@include omega;
 }
+
+/***********************************************************************************/
+/* Mobile Columns */
+/***********************************************************************************/
+
+@media screen and (max-width: 640px) {
+	
+	*[class*='span'], *[class^=' span'] {
+		@include span-columns(12);
+		@include omega();
+	}
+}

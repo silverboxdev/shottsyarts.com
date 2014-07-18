@@ -328,6 +328,18 @@ body.twisted {
 .omega, .last {
   margin-right: 0; }
 
+/***********************************************************************************/
+/* Mobile Columns */
+/***********************************************************************************/
+@media screen and (max-width: 640px) {
+  *[class*='span'], *[class^=' span'] {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0; }
+    *[class*='span']:last-child, *[class^=' span']:last-child {
+      margin-right: 0; } }
 /*-------------------------------------- Global Styles ---------------------------------------*/
 .mobile_only, .mobileNav, .navTrigger {
   display: none; }
@@ -741,12 +753,6 @@ body.twisted footer .contact_form {
 /*-------------------------------------- Extra Files ---------------------------------------*/
 .wp_content .flexslider {
   height: 470px; }
-@media screen and (max-width: 939px) {
-  .wp_content .flexslider {
-    height: auto; }
-    .wp_content .flexslider img {
-      width: 100% !important;
-      height: auto !important; } }
 .wp_content ul.slides {
   zoom: 1;
   margin: 0; }
@@ -778,8 +784,7 @@ body.twisted footer .contact_form {
   .wp_content ul.flex-direction-nav li {
     display: inline-block;
     width: 30px;
-    height: 50px;
-    background: #550067; }
+    height: 50px; }
     .wp_content ul.flex-direction-nav li a {
       display: block;
       width: 18px;
@@ -788,20 +793,33 @@ body.twisted footer .contact_form {
       top: 50%;
       margin-top: -15px; }
     .wp_content ul.flex-direction-nav li a.flex-prev {
-      background: #550067 url("images/slider_arrow_prev.png") 0 0 no-repeat;
-      left: 2%; }
+      background: url("images/slider_arrow_prev.png") 0 0 no-repeat;
+      left: 3px; }
     .wp_content ul.flex-direction-nav li a.flex-next {
       width: 24px;
-      background: #550067 url("images/slider_arrow_next.png") 0 0 no-repeat;
+      background: url("images/slider_arrow_next.png") 0 0 no-repeat;
       right: 0;
-      padding-right: 2%; }
+      padding-right: 3px; }
 .wp_content h2.flex-caption {
   text-align: center;
+  height: 50px;
   background: #550067;
   padding: .5em 0;
   z-index: 9999;
+  color: #ffd10b;
   position: relative; }
 
+@media screen and (max-width: 939px) {
+  .wp_content .flexslider {
+    height: auto; }
+    .wp_content .flexslider img {
+      width: 100% !important;
+      height: auto !important; } }
+@media screen and (max-width: 320px) {
+  .wp_content h2.flex-caption {
+    height: 52px;
+    padding-top: 16px;
+    font-size: 16px; } }
 /*-------------------------------------- Global Input Styles ---------------------------------------*/
 input[type="text"], input[type="email"], textarea {
   display: block;
@@ -1006,14 +1024,28 @@ div.body_wrapper input[type="submit"] {
   header .social_icons {
     padding-right: 1em; }
 
+  .footer .inside {
+    padding-left: 0;
+    padding-right: 0; }
+
   body.twisted header.masthead .logo a {
     background-image: none;
     width: 100%;
     height: auto;
     display: inline; }
 
+  .wp_content img {
+    max-width: 100% !important;
+    height: auto !important; }
+
   /***********************************************************************************/
   /* iPad Portrait Menu */
+  /***********************************************************************************/
+  /***********************************************************************************/
+  /* iPhone Landscape View - 640px Breakpoint */
+  /***********************************************************************************/
+  /***********************************************************************************/
+  /* iPhone Portrait */
   /***********************************************************************************/ }
 @media screen and (max-width: 940px) and (max-width: 768px) {
   .mainNav {
@@ -1069,3 +1101,38 @@ div.body_wrapper input[type="submit"] {
     position: absolute;
     top: 0;
     right: 10px; } }
+@media screen and (max-width: 940px) and (max-width: 640px) {
+  header.masthead .social_icons {
+    text-align: center;
+    float: none; }
+
+  footer {
+    padding-bottom: 1.5em; }
+    footer .contact_us {
+      background: url("images/bg_contact-waffles-640.png") 0 0 no-repeat; }
+    footer .recent_post {
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-top: 1em; }
+    footer .bottom_footer {
+      padding-left: 1em;
+      padding-right: 1em; }
+    footer .copyright {
+      text-align: center; }
+    footer .social_icons {
+      text-align: center; }
+      footer .social_icons .fr {
+        float: none;
+        margin: 0 auto; } }
+@media screen and (max-width: 940px) and (max-width: 320px) {
+  .post_body .f_image, .post_body .f_copy {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0; }
+    .post_body .f_image:last-child, .post_body .f_copy:last-child {
+      margin-right: 0; }
+
+  aside {
+    padding-top: 0; } }

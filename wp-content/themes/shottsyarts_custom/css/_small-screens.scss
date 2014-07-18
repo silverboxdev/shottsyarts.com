@@ -37,6 +37,11 @@ header .social_icons {
 	padding-right: 1em;
 }
 
+.footer .inside {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 // Twisted Header...
 
 body.twisted header.masthead .logo a {
@@ -44,6 +49,13 @@ body.twisted header.masthead .logo a {
 	width: 100%;
 	height: auto;
 	display: inline;
+}
+
+.wp_content {
+	img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
 }
 
 /***********************************************************************************/
@@ -135,3 +147,66 @@ body.twisted header.masthead .logo a {
 		
 }
 
+/***********************************************************************************/
+/* iPhone Landscape View - 640px Breakpoint */
+/***********************************************************************************/
+
+@media screen and (max-width: 640px) {
+
+	header.masthead .social_icons {
+		text-align: center;
+		float: none;
+	}
+
+	footer {
+	
+		padding-bottom: 1.5em;
+	
+		.contact_us {
+			background: url('images/bg_contact-waffles-640.png') 0 0 no-repeat;
+		}
+		
+		.recent_post {
+			padding-left: 1em;
+			padding-right: 1em;
+			margin-top: 1em;
+		}
+		
+		.bottom_footer {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.copyright {
+			text-align: center;
+		}
+		
+		.social_icons {
+		
+			text-align: center;
+			
+			.fr {
+				float: none;
+				margin: 0 auto;
+			}
+		}	
+	}
+}
+
+
+/***********************************************************************************/
+/* iPhone Portrait */
+/***********************************************************************************/
+
+@media screen and (max-width: 320px) {
+	.post_body {
+		.f_image, .f_copy {
+			@include span-columns(12);
+			@include omega();
+		}
+	}
+	
+	aside {
+		padding-top: 0;
+	}
+}
