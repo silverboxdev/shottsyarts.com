@@ -417,7 +417,8 @@ body.twisted header.masthead {
   width: 100%;
   background: #550067; }
   .mainNav ul li {
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
     .mainNav ul li a {
       display: inline-block;
       -webkit-transition: all 0.2s ease;
@@ -434,6 +435,35 @@ body.twisted header.masthead {
       text-transform: uppercase; }
       .mainNav ul li a:hover {
         color: #00a9d3; }
+    .mainNav ul li ul {
+      display: none;
+      position: absolute;
+      top: 99%;
+      left: 0;
+      z-index: 999;
+      background: #9300b3;
+      width: 200px; }
+      .mainNav ul li ul li {
+        display: block;
+        border: none;
+        position: relative; }
+        .mainNav ul li ul li a {
+          display: block;
+          text-transform: capitalize;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          -o-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
+          .mainNav ul li ul li a:hover {
+            background: #00a9d3;
+            color: #FFF; }
+        .mainNav ul li ul li ul {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 99%; }
+  .mainNav ul li.hover_nav > a {
+    color: #00a9d3; }
 
 /*-------------------------------------- Social Media Icons ---------------------------------------*/
 .social_icons a {
@@ -709,8 +739,21 @@ body.twisted footer .contact_form {
       background: #cda600; }
 
 /*-------------------------------------- Extra Files ---------------------------------------*/
+.wp_content .flexslider {
+  height: 470px; }
+@media screen and (max-width: 939px) {
+  .wp_content .flexslider {
+    height: auto; } }
 .wp_content ul.slides {
+  zoom: 1;
   margin: 0; }
+  .wp_content ul.slides:before, .wp_content ul.slides:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .wp_content ul.slides:after {
+    clear: both; }
   .wp_content ul.slides li {
     list-style: none;
     padding: 0; }
@@ -931,3 +974,5 @@ div.body_wrapper input[type="submit"] {
   div.body_wrapper input[type="submit"]:hover {
     cursor: pointer;
     background: #2b0034; }
+
+/*-------------------------------------- Small Screens ---------------------------------------*/

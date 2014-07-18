@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	$('.mainNav li.menu-item-has-children').hover(function() {
 		$(this).toggleClass('hover_nav');
-		$('ul', this).stop(true, true).slideToggle('fast');		
+		$(this).find('ul:first').stop(true, true).slideToggle('fast');		
 	});
 	
 	// Accordion

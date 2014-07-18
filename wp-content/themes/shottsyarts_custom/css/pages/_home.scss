@@ -2,7 +2,18 @@
 	
 	// Flex Slider
 	
+	.flexslider {
+		height: 470px;
+	}
+	
+	@media screen and (max-width: 939px) {
+		.flexslider {
+			height: auto;
+		}
+	}
+	
 	ul.slides {
+		@include clearfix;
 		margin: 0;
 		li {
 			list-style: none;

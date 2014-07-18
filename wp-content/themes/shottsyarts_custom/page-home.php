@@ -16,6 +16,7 @@
             controlNav: false,
             slideshow: false,
             pauseOnAction: "true",
+            smoothHeight: true,
             prevText: "",
             nextText: ""
           });

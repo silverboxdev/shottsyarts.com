@@ -117,6 +117,7 @@ body.twisted {
 		li {
 		
 			display: inline-block;
+			position: relative;
 			
 			a {
 				display: inline-block;
@@ -131,6 +132,47 @@ body.twisted {
 					color: $nav_hover;	
 				}
 			}
+			
+			ul {
+			
+				display: none;
+				position: absolute;
+				top: 99%;
+				left: 0;
+				z-index: 999;
+				background: $purple;
+				width: 200px;
+				
+				li {
+					
+					display: block;
+					border: none;
+					position: relative;
+					
+					a {
+						display: block;
+						text-transform: capitalize;
+						@include all-transition;
+						
+						&:hover {
+							background: $blue;
+							color: #FFF;
+						}
+					}
+					
+					ul {
+						display: none;
+						position: absolute;
+						top: 0;
+						left: 99%;
+					}
+				}
+				
+			}
+		}
+		
+		li.hover_nav > a {
+			color: $blue;
 		}
 	}
 }
@@ -506,3 +548,6 @@ body.twisted footer {
 @import "buttons";
 @import "posts";
 @import "pages/woo";
+
+/*-------------------------------------- Small Screens ---------------------------------------*/
+
