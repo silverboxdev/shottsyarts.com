@@ -96,6 +96,21 @@ function silverbox_register_meta_boxes( $meta_boxes )
 				// CLONES: Add to make the field cloneable (i.e. have multiple value)
 				'clone' => false,
 			),
+			// SELECT BOX
+			array(
+				'name'     => __( 'Title Display', 'rwmb' ),
+				'id'       => "{$prefix}title",
+				'type'     => 'select',
+				// Array of 'value' => 'Label' pairs for select box
+				'options'  => array(
+					'on' => __( 'on', 'rwmb' ),
+					'off' => __( 'off', 'rwmb' ),
+				),
+				// Select multiple values, optional. Default is false.
+				'multiple'    => false,
+				'std'         => '',
+				'placeholder' => __( 'Select an Item', 'rwmb' ),
+			),
 		),
 	);
 

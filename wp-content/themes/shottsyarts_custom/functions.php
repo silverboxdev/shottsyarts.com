@@ -186,8 +186,8 @@ function change_my_wp_login_image() {
 echo "
 <style>
 body.login #login h1 a {
-background: url('http://silverboxdev.com/images/logo_silverbox-wp.png') 0 0 no-repeat transparent;
-height:88px;
+background: url('http://briandominey.com/images/bdd-wp.png') 0 0 no-repeat transparent;
+height:76px;
 width:325px;
 position: relative;
 left: 0px;

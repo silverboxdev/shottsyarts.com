@@ -10,6 +10,8 @@
 		$layer_slide_id = 1;
 	}
 	
+	$title_display = rwmb_meta('silverbox_title');
+	
 	// Grab Sidebar Selection
 	
 	$sidebar_selection = rwmb_meta( 'silverbox_selection' );
@@ -47,7 +49,9 @@
 					
 	<article class="wp_content <?= $sidebar_class; ?>" id="wp_content_<?php the_ID(); ?>">
 		
-		<h2><?= the_title(); ?></h2>
+		<?php if(!empty($title_display) && $title_display != "off") { ?>
+			<h2><?= the_title(); ?></h2>
+		<?php } ?>
 		
 		<?php the_content(); ?>		
 	

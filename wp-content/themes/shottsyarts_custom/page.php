@@ -21,6 +21,10 @@
 		$sidebar_class = "span_8";
 	}
 	
+	// Page Title
+	
+	$title_display = rwmb_meta('silverbox_title');
+	
 	// Layer Slider
 	
 	$layer_slide_id = rwmb_meta('silverbox_slider');
@@ -60,7 +64,11 @@
 		<!-- Wp Content -->
 						
 		<article class="wp_content <?= $sidebar_class; ?>" id="wp_content_<?php the_ID(); ?>">
-				
+		
+			<?php if(!empty($title_display) && $title_display != "off") { ?>
+				<h2><?= the_title(); ?></h2>
+			<?php } ?>
+
 			<?php the_content(); ?>
 				
 		</article>
