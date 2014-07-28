@@ -27,6 +27,9 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		
 		<!-- Styles -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 		
@@ -50,9 +53,9 @@
 				<div class="inside">
 				
 					<div class="social_icons">
-						<a href="#" class="s_icon fb">Facebook</a>
-						<a href="#" class="s_icon twitter">Twitter</a>
-						<a href="#" class="s_icon youtube">YouTube</a>
+						<a href="https://www.facebook.com/ShottsyArts" target="_blank" class="s_icon fb">Facebook</a>
+						<a href="https://twitter.com/Shottsy85" target="_blank" class="s_icon twitter">Twitter</a>
+						<!--<a href="#" class="s_icon youtube">YouTube</a>-->
 					</div>
 				
 					<div class="logo">
