@@ -621,14 +621,14 @@ body.twisted div.feature {
     z-index: 1; }
   .wp_content .alignleft {
     float: left;
-    margin: 1.5em 2em 1.5em 0; }
+    margin: 0 2em .5em 0; }
   .wp_content .alignright {
     float: right;
-    margin: 1.5em 0 1.5em 2em; }
+    margin: 0 0 1.5em .5em; }
   .wp_content .aligncenter,
   .wp_content img.centered {
     display: block;
-    margin: 1.5em auto; }
+    margin: 0 auto; }
   .wp_content .wp-caption {
     text-align: center; }
   .wp_content .wp-caption .wp-caption-text {
