@@ -493,9 +493,9 @@ header .social_icons a.twitter {
   background: url("images/icon_twitter-header.png") 0 0 no-repeat; }
   header .social_icons a.twitter:hover {
     background-position: 0 -30px; }
-header .social_icons a.youtube {
-  background: url("images/icon_youtube-header.png") 0 0 no-repeat; }
-  header .social_icons a.youtube:hover {
+header .social_icons a.deviantart {
+  background: url("images/icon_deviantart-header.png") 0 0 no-repeat; }
+  header .social_icons a.deviantart:hover {
     background-position: 0 -30px; }
 
 footer .social_icons a.fb {
@@ -506,9 +506,9 @@ footer .social_icons a.twitter {
   background: url("images/icon_twitter-footer.png") 0 0 no-repeat; }
   footer .social_icons a.twitter:hover {
     background-position: 0 -30px; }
-footer .social_icons a.youtube {
-  background: url("images/icon_youtube-footer.png") 0 0 no-repeat; }
-  footer .social_icons a.youtube:hover {
+footer .social_icons a.deviantart {
+  background: url("images/icon_deviantart-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.deviantart:hover {
     background-position: 0 -30px; }
 
 body.twisted header .social_icons a.fb, body.twisted footer .social_icons a.fb {
@@ -519,9 +519,9 @@ body.twisted header .social_icons a.twitter, body.twisted footer .social_icons a
   background: url("images/icon_twitter-footer.png") 0 -30px no-repeat; }
   body.twisted header .social_icons a.twitter:hover, body.twisted footer .social_icons a.twitter:hover {
     background-position: 0 0; }
-body.twisted header .social_icons a.youtube, body.twisted footer .social_icons a.youtube {
-  background: url("images/icon_youtube-footer.png") 0 -30px no-repeat; }
-  body.twisted header .social_icons a.youtube:hover, body.twisted footer .social_icons a.youtube:hover {
+body.twisted header .social_icons a.deviantart, body.twisted footer .social_icons a.deviantart {
+  background: url("images/icon_deviantart-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.deviantart:hover, body.twisted footer .social_icons a.deviantart:hover {
     background-position: 0 0; }
 
 /*-------------------------------------- Body Content ---------------------------------------*/
