@@ -55,7 +55,7 @@
 					<div class="social_icons">
 						<a href="https://www.facebook.com/ShottsyArts" target="_blank" class="s_icon fb">Facebook</a>
 						<a href="https://twitter.com/Shottsy85" target="_blank" class="s_icon twitter">Twitter</a>
-						<!--<a href="#" class="s_icon youtube">YouTube</a>-->
+						<a href="http://shottsy85.deviantart.com" target="_blank" class="s_icon deviantart">DeviantArt</a>
 					</div>
 				
 					<div class="logo">
