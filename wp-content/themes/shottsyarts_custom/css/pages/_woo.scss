@@ -107,3 +107,13 @@ div.body_wrapper {
 		}
 	}
 }
+
+.woocommerce {
+	a {
+		color: $blue;
+		text-decoration: underline;
+		&:hover {
+			color: darken($blue, 12%);
+		}
+	}
+}

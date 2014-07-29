@@ -1015,6 +1015,12 @@ div.body_wrapper input[type="submit"] {
     cursor: pointer;
     background: #2b0034; }
 
+.woocommerce a {
+  color: #00a9d3;
+  text-decoration: underline; }
+  .woocommerce a:hover {
+    color: #007896; }
+
 /*-------------------------------------- Small Screens ---------------------------------------*/
 @media screen and (max-width: 940px) {
   /***********************************************************************************/
