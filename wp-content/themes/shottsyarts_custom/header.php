@@ -1,11 +1,12 @@
 <?php
 
 	global $twisted;
+	global $graphic_novel;
 
 	if($twisted == "on") {
 		$body_class = "twisted";
 	}
-	else if($graphic_novel == "on") {
+	elseif($graphic_novel == "on") {
 		$body_class = "graphic_novel";
 	}
 	else {

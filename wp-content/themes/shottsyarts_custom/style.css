@@ -192,6 +192,9 @@ body.twisted {
   body.twisted h1, body.twisted h2, body.twisted h3, body.twisted h4, body.twisted h5 {
     color: #9300b3; }
 
+body.graphic_novel h1, body.graphic_novel h2, body.graphic_novel h3, body.graphic_novel h4, body.graphic_novel h5 {
+  color: #ffd10b; }
+
 /*-------------------------------------- Column Creation ---------------------------------------*/
 .span_12 {
   display: block;
@@ -1020,6 +1023,22 @@ div.body_wrapper input[type="submit"] {
   text-decoration: underline; }
   .woocommerce a:hover {
     color: #007896; }
+
+body.graphic_novel {
+  color: #FFF; }
+  body.graphic_novel .body_wrapper {
+    background: #111111; }
+  body.graphic_novel .wp_content blockquote {
+    font-style: normal;
+    padding: 1em;
+    border: none;
+    margin: 1em 0;
+    background: #333333;
+    color: #FFF;
+    border: 1px solid #333;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px; }
 
 /*-------------------------------------- Small Screens ---------------------------------------*/
 @media screen and (max-width: 940px) {

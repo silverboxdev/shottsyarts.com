@@ -1,0 +1,20 @@
+body.graphic_novel {
+
+	color: #FFF;
+
+	.body_wrapper {
+		background: #111111;
+	}
+	
+	.wp_content blockquote {
+		font-style: normal;
+		padding: 1em;
+		border: none;
+		margin: 1em 0;
+		background: #333333;
+		color: #FFF;
+		border: 1px solid #333;
+		@include round-corners(7px);
+	}
+	
+}
