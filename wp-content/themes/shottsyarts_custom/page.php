@@ -45,7 +45,7 @@
 			
 		</div>
 		
-		<? } ?>
+		<?php } ?>
 	
 		<div class="inside">
 				
@@ -59,7 +59,7 @@
 				<?php endif;?>
 				
 			</aside>
-		<? } ?>
+		<?php } ?>
 		
 		<!-- Wp Content -->
 						
@@ -80,7 +80,7 @@
 					<?php dynamic_sidebar($sidebar_selection); ?>
 				<?php endif;?>
 			</aside>
-		<? } ?>
+		<?php } ?>
 	
 	
 	<?php endwhile; endif; ?>

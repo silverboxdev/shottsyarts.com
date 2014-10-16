@@ -5,6 +5,9 @@
 	if($twisted == "on") {
 		$body_class = "twisted";
 	}
+	else if($graphic_novel == "on") {
+		$body_class = "graphic_novel";
+	}
 	else {
 		$body_class = "non-twisted";
 	}
