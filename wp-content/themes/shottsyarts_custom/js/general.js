@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
 	var theme_path = "/wp-content/themes/shottsyarts_custom";
 
