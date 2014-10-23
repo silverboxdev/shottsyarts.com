@@ -148,6 +148,32 @@ body.twisted header.masthead .logo a {
 }
 
 /***********************************************************************************/
+/* iPhone 6 Landscape Breakpoint */
+/***********************************************************************************/
+
+div.anchor_links {
+	text-align: left;
+	margin-left: 0;
+	margin-right: 0;
+	@include clearfix;
+	background: $dark_purple;
+	padding: .5em 1em;
+	
+}
+
+div.anchor_links a {
+	@include span-columns(6 of 12);
+	@include omega(2n);
+	text-align: center;
+	background: darken($dark_purple, 7%);
+	color: $yellow;
+	padding: .75em 0;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	text-decoration: none;
+}
+
+/***********************************************************************************/
 /* iPhone Landscape View - 640px Breakpoint */
 /***********************************************************************************/
 
