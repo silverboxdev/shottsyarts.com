@@ -545,6 +545,16 @@ div.feature {
 body.twisted div.feature {
   background: url("images/bg_feature-purple.jpg") center center repeat; }
 
+/*-------------------------------------- Anchor Links for Characater Dev Page ---------------------------------------*/
+div.anchor_links {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+div.anchor_links a {
+  display: inline-block;
+  margin-right: 1em; }
+
 /*-------------------------------------- WP Editor ---------------------------------------*/
 .wp_content {
   padding: 3em 0;
@@ -573,6 +583,8 @@ body.twisted div.feature {
     .wp_content a:hover {
       color: #00a9d3;
       text-decoration: none; }
+  .wp_content a.not_real_link {
+    text-decoration: none; }
   .wp_content ol {
     margin: 1em 0 1em 1.15em; }
     .wp_content ol li {
@@ -752,6 +764,18 @@ body.twisted footer .contact_form {
     transition: all 0.2s ease; }
     body.twisted footer .contact_form input[type="submit"]:hover {
       background: #cda600; }
+
+a.scroll_top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: url("images/btn-up.png") 0 0 no-repeat;
+  text-indent: -9999em; }
+  a.scroll_top:hover {
+    background-position: 0 -50px; }
 
 /*-------------------------------------- Extra Files ---------------------------------------*/
 .wp_content .flexslider {

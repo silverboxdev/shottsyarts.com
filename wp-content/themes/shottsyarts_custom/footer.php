@@ -79,6 +79,8 @@
 
 </div>
 
+<a href="#" class="scroll_top">Scroll To Top</a>
+
 
 <?php wp_footer(); ?>
 

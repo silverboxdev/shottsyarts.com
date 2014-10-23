@@ -169,11 +169,17 @@ function wptuts_scripts_with_jquery()
     wp_register_script( 'general', get_template_directory_uri() . '/js/general.js', array( 'jquery' ));
     
     wp_register_script( 'flexslider', get_template_directory_uri() . '/assets/flexslider/jquery.flexslider-min.js');
+    
+    wp_register_script( 'scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.min.js');
+    
+    wp_register_script( 'scrollToLocal', get_template_directory_uri() . '/js/jquery.localScroll.min.js');
  
     // For either a plugin or a theme, you can then enqueue the script:
     wp_enqueue_script( 'general' );
     wp_enqueue_script( 'html5shiv' );
     wp_enqueue_script( 'flexslider' );
+    wp_enqueue_script( 'scrollTo' );
+    wp_enqueue_script( 'scrollToLocal' );
 }
 
 add_action( 'wp_enqueue_scripts', 'wptuts_scripts_with_jquery' );
