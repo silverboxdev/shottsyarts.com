@@ -6,3 +6,6 @@ Version: 2.12
 
 This stylesheet is provided to allow users the ability of overriding the default styles for all display types
 */
+
+.ngg-galleryoverview {text-align:center;}
+div.ngg-gallery-thumbnail-box {float:none;display:inline-block;}
