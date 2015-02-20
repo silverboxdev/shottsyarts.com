@@ -243,13 +243,8 @@ add_theme_support( 'woocommerce' );
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
 function jk_change_breadcrumb_home_text( $defaults ) {
     // Change the breadcrumb home text from 'Home' to 'Appartment'
-	$defaults['home'] = 'Store';
+	$defaults['home'] = 'Home';
 	return $defaults;
-}
-
-add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
-function woo_custom_breadrumb_home_url() {
-    return '/store';
 }
 
 add_action('template_redirect', 'remove_shop_breadcrumbs' );

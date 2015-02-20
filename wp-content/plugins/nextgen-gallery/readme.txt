@@ -1,18 +1,18 @@
 === NextGEN Gallery ===
 Contributors: photocrati
-Tags:gallery,image,images,photo,photos,picture,pictures,slideshow,flash,media,thumbnails,photo-albums,nextgen-gallery,nextgen
+Tags: nextgen, nextgen gallery, gallery, galleries, image, images, image gallery, photo, photos, photo gallery, picture, pictures, picture gallery, album, albums, photo albums, image album, media, media gallery, thumbnails, thumbnail gallery, thumbnail galleries, slideshow, slideshows, slideshow gallery, slideshow galleries, fancybox, lightbox, responsive, responsive gallery, responsive galleries, wordpress responsive gallery, nextcellent, wordpress gallery plugin, wordpress photo gallery plugin, wp gallery, wp gallery plugins, best gallery plugin, free photo gallery, singlepic, image captions imagebrowser, watermarks, watermarking, photography, photographer
 Requires at least: 3.6.1
-Tested up to: 4.0
-Stable tag: trunk
+Tested up to: 4.1.1
+Stable tag: 2.0.74
 License: GPLv2
 
-The most popular WordPress gallery plugin and one of the most popular plugins of all time with over 10 million downloads.
+The most popular WordPress gallery plugin and one of the most popular plugins of all time with over 11 million downloads.
 
 == Description ==
 
 = WordPress Gallery Plugin =
 
-NextGEN Gallery is the most popular **WordPress gallery plugin**, and one of the most popular WordPress plugins of all time, with over 10 million downloads.
+NextGEN Gallery is the most popular **WordPress gallery plugin**, and one of the most popular WordPress plugins of all time, with over 11 million downloads.
 
 It provides a powerful engine for uploading and managing galleries of images, with the ability to batch upload, import meta data, add/delete/rearrange/sort images, edit thumbnails, group galleries into albums, and more. It also provides two front-end display styles (slideshows and thumbnail galleries), both of which come with a wide array of options for controlling size, style, timing, transitions, controls, lightbox effects, and more.
 
@@ -199,6 +199,56 @@ For more information, feel free to visit the official website for the NextGEN Ga
 
 == Changelog ==
 
+= V2.0.74 - 02.20.2015 =
+* Changed: Removed jQuery Lightbox and Highslide due to incompatible licensing with GPL
+
+= V2.0.71 - 02.19.2015 =
+* NEW:     Module files are compiled into a single package file to reduce disk I/O
+* NEW:     All CSS stylesheets and Javascript source files are minified to reduce latency
+* NEW:     All lightboxes are configured using an in-memory management class.
+* NEW:     Uses Pope 2.0, benefiting from the new caching capabilities
+* NEW:     NextGEN Gallery's functionality is disabled if NextGEN Pro is incompatible
+* NEW:     Added ngg_effect_code filter
+* Changed: Updated FontAwesome to 4.3.0
+* Changed: Updated select2 to 3.5.2
+* Changed: Removed PicLens / CoolIris integration
+* Changed: Removed JSON API. Please use XML-RPC API instead
+* Changed: For performance reasons, we cache FS & url lookups/calculations
+* Changed: Greatly reduced the # of sql queries, and eliminated anything redundant
+* Changed: For performance reasons, we cache datamapper and SQL queries
+* Changed: Don't enqueue scripts or styles unless we require them
+* Changed: Reduce the number of resources we enqueue for every HTTP request
+* Changed: Ngg_Store now uses cookies instead of localStorage
+* Changed: Insert Gallery Window is routed using wp-admin/admin_init
+* Changed: Removed unused code from ngglegacy module. Created wrappers for commonly-used functions
+* Changed: LZW module removed
+* Changed: Legacy template drop-down selection now using select2
+* Secured: Restrict folder browsing to NGG_IMPORT_ROOT constant
+* Fixed:   Compatibility issue with PHP's transparent ZLIB compression
+* Fixed:   Imagebrowser as lightbox effect not working when non-default permalink slug used
+* Fixed:   Angled quotations marks used in shortcode parameters
+* Fixed:   Compatibility between ImageBrowser display type and TwentyFifteen theme
+* Fixed:   Allow pagination to retain query string url parameters when linking to other pages
+* Fixed:   Fixed pagination issues with slideshow galleries displayed as thumbnails
+* Fixed:   Fix C_GalleryStorage_Driver_Base->import_gallery_from_fs() not checking imgBackup
+* Fixed:   Fixed problem with default settings being applied multiple times
+* Fixed:   Fallback to "full" image sizes if "backup" images aren't available
+* Fixed:   Use M_DataMapper's serialization methods throughout the codebase
+* Fixed:   Conflict with WordPress SEO and get_the_excerpt() call
+* Fixed:   Don't run Resource Manager on wp-login.php or wp-sign.php
+* Fixed:   TinyMCE Image Editor conflict with Insert Gallery Window placeholder images
+* Fixed:   Fix Shutter positioning when admin bar is displayed
+* Fixed:   Allow deselection of a legacy template
+* Fixed:   Prevent conflicts when using imagebrowser as a lightbox effect
+* Fixed:   Pagination not working for slideshows using thumbnail integration
+
+= V2.0.66.33 - 11.24.2014 =
+* Fixed:   Broken NextGEN Pro ecommerce-related shortcodes
+* Fixed:   Spanish PO file
+
+= V2.0.66.31 - 11.21.2014 =
+* Fixed:   Broken shortcodes with WordPress 4.0.1
+
 = V2.0.66.29 - 09.17.2014 =
 * NEW:     Added skip_excluding_globally_excluded_images property to displayed gallery objects
 * Fixed:   SQL generation for random image selection
@@ -208,7 +258,7 @@ For more information, feel free to visit the official website for the NextGEN Ga
 * Fixed:   Ability to override image files using XML-RPC
 
 = V2.0.66.27 - 08.18.2014 =
-* Fixed:   Missing class.frame_communication_option_handerl.php error
+* Fixed:   Missing class.frame_communication_option_handler.php error
 
 = V2.0.66.26 - 08.18.2014 =
 * NEW:     Added fault tolerance to bulk action AJAX requests
