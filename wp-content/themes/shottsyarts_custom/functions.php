@@ -185,7 +185,7 @@ function wptuts_scripts_with_jquery()
 add_action( 'wp_enqueue_scripts', 'wptuts_scripts_with_jquery' );
 
 /***********************************************************************************/
-/* Silverbox Image */
+/* Brian Dominey Image */
 /***********************************************************************************/
 
 function change_my_wp_login_image() {
@@ -204,12 +204,12 @@ left: 0px;
 add_action("login_head", "change_my_wp_login_image");
 
 function my_login_logo_url() {
-    return 'http://silverboxdev.com/contact';
+    return 'http://briandominey.com/contact';
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 function my_login_logo_url_title() {
-    return 'Silverbox Development';
+    return 'Brian Dominey Design';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
