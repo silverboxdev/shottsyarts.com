@@ -25,7 +25,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta name="keywords" content="" />
-		<meta name="author" content="Silverbox Development">
 		<meta name="robots" content="index,follow" />
 		
 		<!-- Mobile Specific Meta -->
@@ -36,6 +35,16 @@
 		
 		<!-- Styles -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+		
+		<!-- Facebook Open Graph Meta Data -->
+			<meta property="og:type" content="website"/>
+			<meta property="og:title" content="Shottsy Arts" />
+			<meta property="og:url" content="http://shottsyarts.com" />
+			<meta property="og:image" content="http://shottsyarts.com/wp-content/uploads/2015/07/shottsy-arts-facebook-og.jpg" />
+			<meta property="og:image:type" content="image/jpg">
+			<meta property="og:image:width" content="1200" />
+			<meta property="og:image:height" content="630" />
+			<meta property="og:description" content="From one of a kind items such as hand crafted sculpture from wire, to vibrant and unique every day useful items such as t-shirts and messenger bags, Shottsy Arts has a lot to see and choose from!"/>
 		
 		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Overlock:400,700,900,400italic,700italic,900italic|Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
