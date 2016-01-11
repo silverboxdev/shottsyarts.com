@@ -5,6 +5,8 @@ wp-content/upgrade/*
 wp-content/uploads/*
 staging/
 staging/*
+wp-content/themes/shottsyarts_custom/.sass-cache/
+wp-content/themes/shottsyarts_custom/.sass-cache/*
 
 wp-config.php
 wc-logs/*

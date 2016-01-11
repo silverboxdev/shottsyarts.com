@@ -29,6 +29,7 @@
 	
 	$layer_slide_id = rwmb_meta('silverbox_slider');
 	
+	
 ?>
 
 <!-- Start Main Content -->

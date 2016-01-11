@@ -21,12 +21,14 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
+		do_action( 'woocommerce_after_shop_loop' );
 	?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="page-title archive-content-title"><?php woocommerce_page_title(); ?></h1>
-
+			Teesting
+			
 		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
