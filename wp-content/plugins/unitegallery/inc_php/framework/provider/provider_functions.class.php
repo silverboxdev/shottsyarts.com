@@ -115,6 +115,20 @@ class UniteProviderFunctionsUG{
 		return($urlImage);
 	}
 	
+	
+	/**
+	 * get image data from image id
+	 */
+	public static function getImageDataFromImageID($imageID){
+		if(empty($imageID))
+			return(null);
+		
+		$data = UniteFunctionsWPUG::getAttachmentData($imageID);
+		
+		return($data);
+	}
+	
+	
 	/**
 	 * get image url from image id
 	 */
@@ -437,6 +451,51 @@ class UniteProviderFunctionsUG{
 	}
 	
 	
+	/**
+	 * check that inner zip exists, and unpack it if do
+	 */
+	private static function updatePlugin_checkUnpackInnerZip($pathUpdate, $zipFilename){
+		
+		$arrFiles = UniteFunctionsUG::getFileList($pathUpdate);
+		
+		if(empty($arrFiles))
+			return(false);
+		
+		//get inner file
+		$filenameInner = null;
+		foreach($arrFiles as $innerFile){
+			if($innerFile != $zipFilename)
+				$filenameInner = $innerFile;
+		}
+		
+		if(empty($filenameInner))
+			return(false);
+		
+		//check if internal file is zip
+		$info = pathinfo($filenameInner);
+		$ext = UniteFunctionsUG::getVal($info, "extension");
+		if($ext != "zip")
+			return(false);
+		
+		$filepathInner = $pathUpdate.$filenameInner;
+		
+		if(file_exists($filepathInner) == false)
+			return(false);
+		
+		dmp("detected inner zip file. unpacking...");
+		
+		//check if zip exists
+		$zip = new UniteZipUG();
+		
+		if(function_exists("unzip_file") == true){
+			WP_Filesystem();
+			$response = unzip_file($filepathInner, $pathUpdate);
+		}
+		else
+			$zip->extract($filepathInner, $pathUpdate);
+		
+	}
+	
 	
 	/**
 	 *
@@ -511,7 +570,7 @@ class UniteProviderFunctionsUG{
 			
 			//remove all files in the update folder
 			$arrNotDeleted = UniteFunctionsUG::deleteDir($pathUpdate, false);
-						
+					
 			if(!empty($arrNotDeleted)){
 				$strNotDeleted = print_r($arrNotDeleted,true);
 				UniteFunctionsUG::throwError("Could not delete those files from the update folder: $strNotDeleted");
@@ -532,28 +591,40 @@ class UniteProviderFunctionsUG{
 			else
 				$zip->extract($filepathZip, $pathUpdate);
 			
+
+			//check for internal zip in case that cocecanyon original zip was uploaded
+			self::updatePlugin_checkUnpackInnerZip($pathUpdate, $filename);
+
 			//get extracted folder
 			$arrFolders = UniteFunctionsUG::getDirList($pathUpdate);
 			if(empty($arrFolders))
 				UniteFunctionsUG::throwError("The update folder is not extracted");
 			
-			if(count($arrFolders) > 1)
-				UniteFunctionsUG::throwError("Extracted folders are more then 1. Please check the update file.");
-			
 			//get product folder
-			$productFolder = $arrFolders[0];
+			$productFolder = null;
+
+			if(count($arrFolders) == 1)
+				$productFolder = $arrFolders[0];
+			else{
+				foreach($arrFolders as $folder){
+					if($folder != "documentation")
+						$productFolder = $folder;
+				}
+			}
+			
 			
 			if(empty($productFolder))
 				UniteFunctionsUG::throwError("Wrong product folder.");
-									
+
+			
 			$pathUpdateProduct = $pathUpdate.$productFolder."/";
-						
+			
 			//check some file in folder to validate it's the real one:
 			$checkFilepath = $pathUpdateProduct."unitegallery.php";
-						
+			
 			if(file_exists($checkFilepath) == false)
 				UniteFunctionsUG::throwError("Wrong update extracted folder. The file: ".$checkFilepath." not found.");
-						
+			
 			//copy the plugin without the captions file.
 			$pathOriginalPlugin = GlobalsUG::$pathPlugin;
 						
@@ -583,10 +654,14 @@ class UniteProviderFunctionsUG{
 					echo "<script>location.href='$linkBack'</script>";
 	
 			}catch(Exception $e){
-			$message = $e->getMessage();
-			$message .= " <br> Please update the plugin manually via the ftp";
-			echo "<div style='color:#B80A0A;font-size:18px;'><b>Update Error: </b> $message</div><br>";
-			echo $htmlLinkBack;
+				
+				//remove all files in the update folder
+				UniteFunctionsUG::deleteDir($pathUpdate);
+				
+				$message = $e->getMessage();
+				$message .= " <br> Please update the plugin manually via the ftp";
+				echo "<div style='color:#B80A0A;font-size:18px;'><b>Update Error: </b> $message</div><br>";
+				echo $htmlLinkBack;
 			exit();
 		}
 		

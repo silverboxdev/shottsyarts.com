@@ -1,3 +1,35 @@
+version 1.5.8 b2
+
+-bug fix: fixed shortcode include on some special widgets and editors
+
+-change: take new image title from attachment title if available
+-change: removed link open in option from item edit window because it was not needed.
+
+version 1.5.8 b1
+
+-bug fix: fixed issue that gallery shortcode was working only on posts/pages content.
+
+version 1.5.8
+
+-bug fix: the video player stayed on compact mode on slide change
+-change: added more "protection" agains another type of theme content filters.
+-change: make the gallery "updatable" from codecanyon main file
+
+
+version 1.5.7
+
+-change: set lightbox transition "fade" as default transition
+-bug fix: fixed position: left,right for tiles columns view. 
+
+version 1.5.6
+
+-feature: added option:  "Always Show Video Play Icon" in tile design section 
+-fixed float right functionality on tiles type galleries (made rtl direction).
+
+version 1.5.5 b1
+
+- added export / import all content function for theme in php operations class.
+
 version 1.5.5
 
 -feature: done "export/import gallery" feature

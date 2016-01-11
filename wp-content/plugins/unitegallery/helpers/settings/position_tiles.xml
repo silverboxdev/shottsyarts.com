@@ -5,9 +5,9 @@
 			<fieldset name="position" label="Position" icon="eg-icon-resize-full-alt">
 				<field name="position" type="list" default="center" label="Position on the page" description="The position of the slider on the page, &lt;br&gt; default - no styles added, &lt;br&gt; float:left, float:right, margin:0px auto;">
 					<option value="default" text="Default" />
-					<option value="left" text="Float Left" />
+					<option value="left" text="Left" />
 					<option value="center" text="Center" />
-					<option value="right" text="Float Right" />
+					<option value="right" text="Right" />
 				</field>
 				<field name="margin_top" type="text" label="Margin Top" default="0" unit="px" datatype="number" description="The top margin of the slider wrapper div" />
 				<field name="margin_bottom" type="text" label="Margin Bottom" default="0" unit="px" datatype="number" description="The bottom margin of the slider wrapper div" />
