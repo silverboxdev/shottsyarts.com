@@ -1017,11 +1017,49 @@ div.body_wrapper input[type="submit"] {
     cursor: pointer;
     background: #2b0034; }
 
-.woocommerce a {
-  color: #00a9d3;
-  text-decoration: underline; }
-  .woocommerce a:hover {
-    color: #007896; }
+.woocommerce {
+  padding-bottom: 2em; }
+  .woocommerce a {
+    color: #00a9d3;
+    text-decoration: underline; }
+    .woocommerce a:hover {
+      color: #007896; }
+
+.body_wrapper .woocommerce nav.woocommerce-pagination ul {
+  border: none; }
+
+.body_wrapper .woocommerce nav.woocommerce-pagination ul li {
+  border-right: none; }
+
+.body_wrapper .woocommerce nav.woocommerce-pagination ul li a, .body_wrapper .woocommerce nav.woocommerce-pagination ul li span {
+  font-size: 22px;
+  display: inline-block;
+  padding: .5em .75em !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFD10B;
+  background: #550067;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-shadow: none;
+  font-weight: 700;
+  font-family: 'Overlock', cursive;
+  font-weight: 900;
+  font-style: normal;
+  margin-right: .35em; }
+.body_wrapper .woocommerce nav.woocommerce-pagination ul li span.current {
+  background: #FFD10B;
+  color: #550067; }
+.body_wrapper .woocommerce nav.woocommerce-pagination ul li a:hover {
+  color: #FFD10B;
+  background: #33003e; }
 
 body.graphic_novel {
   color: #FFF; }

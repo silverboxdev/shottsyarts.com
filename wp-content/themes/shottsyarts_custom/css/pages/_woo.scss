@@ -109,6 +109,7 @@ div.body_wrapper {
 }
 
 .woocommerce {
+	padding-bottom: 2em;
 	a {
 		color: $blue;
 		text-decoration: underline;
@@ -116,4 +117,46 @@ div.body_wrapper {
 			color: darken($blue, 12%);
 		}
 	}
+}
+
+// Pagination
+
+.body_wrapper .woocommerce nav.woocommerce-pagination ul {
+	border: none;
+}
+
+.body_wrapper .woocommerce nav.woocommerce-pagination ul li {
+	border-right: none;
+}
+
+.body_wrapper {
+
+	.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span {
+		font-size: 22px;
+		display: inline-block;
+		padding: .5em .75em !important;
+		border: 1px solid transparent !important;
+		@include round-corners(5px);
+		@include overlock_heavy;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $yellow;
+		background: $dark_purple;
+		@include all-transition;
+		text-shadow: none;
+		font-weight: 700;
+		@include overlock_heavy;
+		margin-right: .35em;
+	}
+
+	.woocommerce nav.woocommerce-pagination ul li span.current {
+		background: $yellow;
+		color: $dark_purple;
+	}
+
+	.woocommerce nav.woocommerce-pagination ul li a:hover {
+		color: $yellow;
+		background: darken($dark_purple, 8%);
+	}
+
 }
