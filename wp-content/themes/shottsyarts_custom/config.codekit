@@ -1142,39 +1142,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/icon_deviantart-footer.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 496,
-		"inputAbbreviatedPath": "\/images\/icon_deviantart-footer.png",
-		"outputAbbreviatedPath": "\/images\/icon_deviantart-footer.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/icon_deviantart-header.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 496,
-		"inputAbbreviatedPath": "\/images\/icon_deviantart-header.png",
-		"outputAbbreviatedPath": "\/images\/icon_deviantart-header.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/icon_deviantart.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 496,
-		"inputAbbreviatedPath": "\/images\/icon_deviantart.png",
-		"outputAbbreviatedPath": "\/images\/icon_deviantart.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/icon_facebook-footer.png": {
 		"fileType": 32768,
 		"ignore": 0,
