@@ -487,6 +487,10 @@ header .social_icons a.twitter {
   background: url("images/icon_twitter-header.png") 0 0 no-repeat; }
   header .social_icons a.twitter:hover {
     background-position: 0 -30px; }
+header .social_icons a.tumblr {
+  background: url("images/icon_tumblr-header.png") 0 0 no-repeat; }
+  header .social_icons a.tumblr:hover {
+    background-position: 0 -30px; }
 header .social_icons a.deviantart {
   background: url("images/icon_deviantart-header.png") 0 0 no-repeat; }
   header .social_icons a.deviantart:hover {
@@ -508,6 +512,10 @@ footer .social_icons a.twitter {
   background: url("images/icon_twitter-footer.png") 0 0 no-repeat; }
   footer .social_icons a.twitter:hover {
     background-position: 0 -30px; }
+footer .social_icons a.tumblr {
+  background: url("images/icon_tumblr-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.tumblr:hover {
+    background-position: 0 -30px; }
 footer .social_icons a.deviantart {
   background: url("images/icon_deviantart-footer.png") 0 0 no-repeat; }
   footer .social_icons a.deviantart:hover {
@@ -528,6 +536,10 @@ body.twisted header .social_icons a.fb, body.twisted footer .social_icons a.fb {
 body.twisted header .social_icons a.twitter, body.twisted footer .social_icons a.twitter {
   background: url("images/icon_twitter-footer.png") 0 -30px no-repeat; }
   body.twisted header .social_icons a.twitter:hover, body.twisted footer .social_icons a.twitter:hover {
+    background-position: 0 0; }
+body.twisted header .social_icons a.tumblr, body.twisted footer .social_icons a.tumblr {
+  background: url("images/icon_tumblr-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.tumblr:hover, body.twisted footer .social_icons a.tumblr:hover {
     background-position: 0 0; }
 body.twisted header .social_icons a.deviantart, body.twisted footer .social_icons a.deviantart {
   background: url("images/icon_deviantart-footer.png") 0 -30px no-repeat; }

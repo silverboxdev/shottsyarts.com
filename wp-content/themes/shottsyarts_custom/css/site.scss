@@ -202,6 +202,12 @@ header .social_icons {
 			background-position: 0 -30px;
 		}
 	}
+	a.tumblr {
+		background: url('images/icon_tumblr-header.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
 	a.deviantart {
 		background: url('images/icon_deviantart-header.png') 0 0 no-repeat;
 		&:hover {
@@ -233,6 +239,12 @@ footer .social_icons {
 	}
 	a.twitter {
 		background: url('images/icon_twitter-footer.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.tumblr {
+		background: url('images/icon_tumblr-footer.png') 0 0 no-repeat;
 		&:hover {
 			background-position: 0 -30px;
 		}
@@ -269,6 +281,12 @@ body.twisted {
 		}
 		a.twitter {
 			background: url('images/icon_twitter-footer.png') 0 -30px no-repeat;
+			&:hover {
+				background-position: 0 0;
+			}
+		}
+		a.tumblr {
+			background: url('images/icon_tumblr-footer.png') 0 -30px no-repeat;
 			&:hover {
 				background-position: 0 0;
 			}
