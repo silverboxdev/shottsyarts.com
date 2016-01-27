@@ -67,7 +67,9 @@
 			<div class="fr">
 				<a href="https://www.facebook.com/ShottsyArts" target="_blank" class="s_icon fb">Facebook</a>
 				<a href="https://twitter.com/Shottsy85" target="_blank" class="s_icon twitter">Twitter</a>
+				<a href="https://www.instagram.com/shottsyarts/" target="_blank" class="s_icon instagram">Instagram</a>
 				<a href="http://shottsy85.deviantart.com" target="_blank" class="s_icon deviantart">DeviantArt</a>
+				<a href="http://www.furaffinity.net/user/shottsy85" target="_blank" class="s_icon furaffinity">Furraffinity</a>
 			</div>
 		</div>
 		

@@ -491,6 +491,14 @@ header .social_icons a.deviantart {
   background: url("images/icon_deviantart-header.png") 0 0 no-repeat; }
   header .social_icons a.deviantart:hover {
     background-position: 0 -30px; }
+header .social_icons a.instagram {
+  background: url("images/icon_instagram-header.png") 0 0 no-repeat; }
+  header .social_icons a.instagram:hover {
+    background-position: 0 -30px; }
+header .social_icons a.furaffinity {
+  background: url("images/icon_furaffinity-header.png") 0 0 no-repeat; }
+  header .social_icons a.furaffinity:hover {
+    background-position: 0 -30px; }
 
 footer .social_icons a.fb {
   background: url("images/icon_facebook-footer.png") 0 0 no-repeat; }
@@ -504,6 +512,14 @@ footer .social_icons a.deviantart {
   background: url("images/icon_deviantart-footer.png") 0 0 no-repeat; }
   footer .social_icons a.deviantart:hover {
     background-position: 0 -30px; }
+footer .social_icons a.instagram {
+  background: url("images/icon_instagram-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.instagram:hover {
+    background-position: 0 -30px; }
+footer .social_icons a.furaffinity {
+  background: url("images/icon_furaffinity-footer.png") 0 0 no-repeat; }
+  footer .social_icons a.furaffinity:hover {
+    background-position: 0 -30px; }
 
 body.twisted header .social_icons a.fb, body.twisted footer .social_icons a.fb {
   background: url("images/icon_facebook-footer.png") 0 -30px no-repeat; }
@@ -516,6 +532,14 @@ body.twisted header .social_icons a.twitter, body.twisted footer .social_icons a
 body.twisted header .social_icons a.deviantart, body.twisted footer .social_icons a.deviantart {
   background: url("images/icon_deviantart-footer.png") 0 -30px no-repeat; }
   body.twisted header .social_icons a.deviantart:hover, body.twisted footer .social_icons a.deviantart:hover {
+    background-position: 0 0; }
+body.twisted header .social_icons a.instagram, body.twisted footer .social_icons a.instagram {
+  background: url("images/icon_instagram-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.instagram:hover, body.twisted footer .social_icons a.instagram:hover {
+    background-position: 0 0; }
+body.twisted header .social_icons a.furaffinity, body.twisted footer .social_icons a.furaffinity {
+  background: url("images/icon_furaffinity-footer.png") 0 -30px no-repeat; }
+  body.twisted header .social_icons a.furaffinity:hover, body.twisted footer .social_icons a.furaffinity:hover {
     background-position: 0 0; }
 
 /*-------------------------------------- Body Content ---------------------------------------*/

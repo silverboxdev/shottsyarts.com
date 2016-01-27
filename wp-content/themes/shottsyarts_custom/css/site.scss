@@ -208,6 +208,19 @@ header .social_icons {
 			background-position: 0 -30px;
 		}
 	}
+	a.instagram {
+		background: url('images/icon_instagram-header.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.furaffinity {
+		background: url('images/icon_furaffinity-header.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+
 }
 
 
@@ -226,6 +239,18 @@ footer .social_icons {
 	}
 	a.deviantart {
 		background: url('images/icon_deviantart-footer.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.instagram {
+		background: url('images/icon_instagram-footer.png') 0 0 no-repeat;
+		&:hover {
+			background-position: 0 -30px;
+		}
+	}
+	a.furaffinity {
+		background: url('images/icon_furaffinity-footer.png') 0 0 no-repeat;
 		&:hover {
 			background-position: 0 -30px;
 		}
@@ -250,6 +275,18 @@ body.twisted {
 		}
 		a.deviantart {
 			background: url('images/icon_deviantart-footer.png') 0 -30px no-repeat;
+			&:hover {
+				background-position: 0 0;
+			}
+		}
+		a.instagram {
+			background: url('images/icon_instagram-footer.png') 0 -30px no-repeat;
+			&:hover {
+				background-position: 0 0;
+			}
+		}
+		a.furaffinity {
+			background: url('images/icon_furaffinity-footer.png') 0 -30px no-repeat;
 			&:hover {
 				background-position: 0 0;
 			}
